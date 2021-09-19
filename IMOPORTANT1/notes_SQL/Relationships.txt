@@ -1,0 +1,14 @@
+a one to one relations ship is represented by putting all the table attributes that are connected in the same data base 
+
+
+
+a one to many relationship is created by making a foreign key that refrences an id from another table 
+
+
+a many to many relationship is created by making a new table having both id's from the 2 tables refrenced as forgien keys ( creating a composite primary key) 	
+
+
+when a many to many relationship is decided if you cant have a clear idea wheather or not certain data can be uniquly idenified 
+
+
+

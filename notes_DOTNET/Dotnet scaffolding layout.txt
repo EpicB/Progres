@@ -1,0 +1,28 @@
+in the programs file that is what is used to run the project or the starting instance of code that starts the project
+
+
+
+the Startup method allows you to add configurations on the different api's
+
+configureservices method is where you add all the services in your application 
+that you wanna use through that application 
+
+
+configure method you setup request pipeline 
+
+
+request pipeline is made of multiple middleware each middlware has a function it may or may not
+pass the request further down the chain of middleware or may short socket and pass the request back
+the order in which you add middleware is important
+
+.csproj file is where we need to setup any refrence to packages that we need to build 
+
+appsettings.json is where you set additional config or connection string 
+
+appsettings.development.json used in a development enviorment ^
+
+launchSettings.json << defines where the application will start and what port and some settings
+
+
+models are the representation of the main data within our application 
+

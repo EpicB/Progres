@@ -1,0 +1,124 @@
+PSQL CLI COMMNADS
+
+\copy (select * from table_name << whatever expresion works)  to 'location/speciffilename.csv' delimiter ',' CSV HEADER;
+
+\l will list all the databases 
+
+\c dbname will connect you to that database 
+
+\d list all the tables in the database
+
+\d name_of_table will show info about the table 
+
+\i [filename] allows you to excute commands from a file 
+
+SQL COMMANDS
+CREATE DATABASE dbname; creates a database 
+
+DROP DATABASE dbname; deletes a database ( NEVER USE )
+
+CREATE table test (
+   unames varchar(16) Primary key,
+    age integer CHECK(age > 14),
+   first varchar(64) NOT NULL,
+   last varchar (64) NOT NULL
+);
+
+DROP TABLE table_name; removes the table with all of its data ( NEVER USE )
+
+select column_name from table_name; selects that column and shows it 
+
+you can use (order by) keyword
+
+select column_name from table_name ORDER BY column_name desc ; by default its acssending order add asc or desc after column name
+
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp"; // can be used to add an extension 
+
+select distinct column_name from table_name order by column_name; this will get you all the data but not repeated 
+
+where can used to apply conditions on the select statment returns true or false
+
+LIMIT --- >  select * from table_name limit 5; --- i only want to see the first 5 rows
+
+fetch --- > select * from data_random fetch first n row only;
+
+<> not equal operator other operations 
+IN KEYWORD --- > select * from table_name where country_of_birth in("data1","data2","data3"); it does 3 matches
+and in a plpgsql for loop loops 3 times over all the data in the string
+
+DATE IS A SQL FUNCTION can be used as follows -- 
+YYYY-MM-DD
+select * from table_name where date_of_birth between DATE '2001-02-03' and '2003-03-03';
+ 
+BETWEEN --- > select * from test_random where id between 1 and 3 ; give me the id from 1 to 3 
+
+like --- > select * from test_random where email like '%@google.%'; give me all the emails that are google emails that end
+with w/e 
+
+SELECT * from test_random where email like '_____@%'; give me all the emails that has 6 charachers before the @ 
+% represents anything 
+_ represents 1 character
+
+ILIKE --- > keyword same as like keyword the only difference is that it ignores the case p or P same thing
+
+Group by --- > select country , function() group by country; take that function and apply it to the column based on how 
+
+having is like where but you can use functions with it so when using group by if you compare a function value 
+you should use having 
+
+agregarte function 
+
+select min(column_name) from table_name ;
+select round(max(column_name)) from table_name ;
+
+
+select gender , count(*) from test_random group by gender having count(*) > 30;
+its grouped  
+
+
+
+arthmatic operations example 
+select id ,make , model, price , round(price * .10 ,2), round (price - ( price*.10 ),2) from table_name
+
+
+select Coalesce(email, 'email not provided ') from table_name; if the emnail is null show it as email not provided 
+
+select NOW(); ---- returns the time 
+select NOW()::DATE; ---- you can gather the date 
+select NOW()::TIME; ---- you can gather the time with MS
+
+select extract(year from now()); this will return the actual year ---- ( month and day and dow and century )
+
+https://www.postgresql.org/docs/current/datatype-datetime.html
+
+https://www.postgresql.org/docs/9.5/functions-aggregate.html
+
+age function 
+
+
+select first_name , last_name , date_of_birth ,age(now(),date_of_birth) as age from table_name;
+
+delete from table_name where = "id"; ALWAYS SPECIFY A WHERE CLASUE if you dont its going to delete everything
+
+update from table_name set coulmn_name = "soemthing",coulmn_name = "something" where ="id"; IF YOU DONT SPECIFY A WHERE CLAUSE EVERYTHING GETS UPDATED
+
+
+ON CONFLICT (id) do nothing 
+if you wanna handle an error you can use the 
+ON CONFLICT (id) DO UPDATE SET email = ECLUDED.email; if a column has unique and you got an id conflict you can exclude the update on that
+value 
+
+how to restart a sequence type value
+
+alter sequence name_of_sequence restart with value_to_start_with;
+
+GENERAL INFO 
+
+BIGSERIAL \\ is a data type that increaments the next value 8 bit number
+
+DATE \\ this is a data type uses the date structure to when inserting to data example
+
+insert into table_name (date_of_birth) values (DATE '1988-01-20')
+
+
+insert into test_random (id , first_name , last_name , email, gender,date_of) values(1022,'a','a','asdasdas@gmail.com,Femail,'2001-01-01');

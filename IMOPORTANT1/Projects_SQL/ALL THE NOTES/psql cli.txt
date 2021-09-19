@@ -1,0 +1,43 @@
+PSQL CLI COMMNADS
+
+\l will list all the databases 
+
+\c dbname will connect you to that database 
+
+\d list all the tables in the database
+
+\d name_of_table will show info about the table 
+
+\i [filename] allows you to excute commands from a file 
+
+SQL COMMANDS
+CREATE DATABASE dbname; creates a database 
+
+DROP DATABASE dbname; deletes a database ( NEVER USE )
+
+CREATE table test (
+   unames varchar(16) Primary key,
+    age integer CHECK(age > 14),
+   first varchar(64) NOT NULL,
+   last varchar (64) NOT NULL
+);
+
+DROP TABLE table_name; removes the table with all of its data ( NEVER USE )
+
+select column_name from table_name; selects that column and shows it 
+
+you can use (order by) keyword
+
+select column_name from table_name ORDER BY column_name desc ; by default its acssending order add asc or desc after column name
+
+CREATE EXTENSION IF NOT EXISTS "uuid-ossp"; // can be used to add an extension 
+
+GENERAL INFO 
+
+BIGSERIAL \\ is a data type that increaments the next value 8 bit number
+
+DATE \\ this is a data type uses the date structure to when inserting to data example
+
+insert into table_name (date_of_birth) values (DATE '1988-01-20')
+
+

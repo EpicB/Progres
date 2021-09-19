@@ -1,0 +1,75 @@
+
+CREATE OR REPLACE PROCEDURE public.insertshortcut(
+	unamevar citext,
+	agevar integer DEFAULT NULL::integer,
+	INOUT _userid uuid DEFAULT NULL::uuid)
+LANGUAGE 'plpgsql'
+AS $BODY$
+begin
+insert into student(uname,age)values(unamevar,agevar)
+returning userid into _userid;
+end;
+$BODY$;
+
+
+
+you can define an inout parmeter to make the procedure return a value lets say for example you created a user and you wanna use there id immeditaly or show it 
+
+
+you can make default parameters 
+
+INOUT _userid uuid DEFAULT NULL::uuid)
+
+
+returning userid into _userid;
+
+
+
+
+
+
+PROEDURE IS FOR MANIPULATING DATA
+
+
+FUNCTION IS FOR RETURNING DATA 
+
+
+
+always make sure to use citext when passing parameters using the normal text could lead to security issues 
+
+
+
+
+CREATE OR REPLACE FUNCTION public.getusernames(
+	thisname citext)
+    RETURNS SETOF student 
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE PARALLEL UNSAFE
+    ROWS 1000
+
+AS $BODY$
+begin 
+return query select userid , uname , 0 as age from student where uname = thisname ;
+end;
+$BODY$;
+
+
+حل ترقيع 
+
+
+
+
+CREATE OR REPLACE FUNCTION public.getusernames(
+	thisname citext)
+    RETURNS SETOF student 
+    LANGUAGE 'plpgsql'
+    COST 100
+    VOLATILE PARALLEL UNSAFE
+    ROWS 1000
+
+AS $BODY$
+begin 
+return query select userid , uname , 0 as age from student where uname = thisname ;
+end;
+$BODY$;

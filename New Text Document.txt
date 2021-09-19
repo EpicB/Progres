@@ -1,0 +1,52 @@
+insert into users (userid, user_type, username) values ('7c20d46b-dfc6-4972-86e2-0cb83873126f', 3, 'fhaulkham0');
+insert into users (userid, user_type, username) values ('63dfda47-3105-429a-a0bb-74a98c8db8c1', 1, 'ahopkins1');
+insert into users (userid, user_type, username) values ('88902868-7c01-4a17-8c54-980b4222658c', 3, 'mgeorgins2');
+insert into users (userid, user_type, username) values ('ee0d9a11-ff3e-4fbb-a4d3-143d7a1b968d', 3, 'sgutowska3');
+insert into users (userid, user_type, username) values ('aab6a3c3-526f-4d86-a19b-658b3b18b92d', 2, 'jpoller4');
+insert into users (userid, user_type, username) values ('9b5f096e-cfa9-45c7-8ac6-039fee92a1da', 2, 'bparsall5');
+insert into users (userid, user_type, username) values ('d370e621-563c-486a-a641-8b04c6463e6d', 2, 'htoppas6');
+insert into users (userid, user_type, username) values ('dfb3e18f-b066-45a2-9881-875315b0e20c', 3, 'byurchenko7');
+insert into users (userid, user_type, username) values ('361f8af3-8b28-4057-a520-4600996cf2f5', 3, 'vfiggs8');
+insert into users (userid, user_type, username) values ('e5c949fb-b4f1-47e8-bb6b-ea4e002a0e7c', 3, 'amosedale9');
+insert into users (userid, user_type, username) values ('bcb280f9-69d1-448a-bb71-0accda483546', 3, 'dmicklema');
+insert into users (userid, user_type, username) values ('c2c22470-dda9-4e67-b25f-d530b5588dc8', 1, 'sdashwoodb');
+insert into users (userid, user_type, username) values ('3686a341-d246-4a4b-93d9-9ea6922b7b59', 1, 'lnailec');
+insert into users (userid, user_type, username) values ('9004bed4-7610-4b17-ac39-a738079afbe1', 1, 'hnapperd');
+insert into users (userid, user_type, username) values ('a69ff620-6932-4d07-bf2e-5b8d7ee06cd2', 2, 'rselewaye');
+insert into users (userid, user_type, username) values ('41059790-3cb5-4a35-ab8e-725dacce4e78', 2, 'gredhousef');
+insert into users (userid, user_type, username) values ('18e19992-fbab-469d-b7fb-97ad1faf64bf', 1, 'ltripconyg');
+insert into users (userid, user_type, username) values ('f912b6b3-9e4a-4f29-b983-b30798d2b595', 1, 'etoursh');
+
+
+
+
+insert into courses (courseid, creation_time, course_time, userid) values (38, 29, 32, '7c20d46b-dfc6-4972-86e2-0cb83873126f');
+insert into courses (courseid, creation_time, course_time, userid) values (39, 52, 38, '63dfda47-3105-429a-a0bb-74a98c8db8c1');
+insert into courses (courseid, creation_time, course_time, userid) values (40, 56, 42, 'ed8e5ef6-eb68-4aab-a338-ef5532d216da');
+insert into courses (courseid, creation_time, course_time, userid) values (41, 58, 48, '88902868-7c01-4a17-8c54-980b4222658c');
+insert into courses (courseid, creation_time, course_time, userid) values (42, 54, 58, 'ee0d9a11-ff3e-4fbb-a4d3-143d7a1b968d');
+insert into courses (courseid, creation_time, course_time, userid) values (43, 57, 43, 'aab6a3c3-526f-4d86-a19b-658b3b18b92d');
+insert into courses (courseid, creation_time, course_time, userid) values (44, 22, 43, 'ee723cef-0e8f-4dca-b739-01a93d847953');
+insert into courses (courseid, creation_time, course_time, userid) values (45, 21, 31, '7c20d46b-dfc6-4972-86e2-0cb83873126f');
+insert into courses (courseid, creation_time, course_time, userid) values (46, 21, 45, '83c4c2d1-b9bf-4955-b95d-0c8b0e4830b4');
+insert into courses (courseid, creation_time, course_time, userid) values (47, 47, 47, '164d0890-ccd6-4204-8042-cc018e972184');
+insert into courses (courseid, creation_time, course_time, userid) values (48, 49, 33, '177a3488-cac5-415e-9c52-ae0fdc74f750');
+insert into courses (courseid, creation_time, course_time, userid) values (49, 48, 50, '67b0f7c0-27a4-4868-8a73-63272dd7e6a8');
+insert into courses (courseid, creation_time, course_time, userid) values (50, 49, 59, '38bad1a3-44af-45b2-b957-12a8b12186fc');
+insert into courses (courseid, creation_time, course_time, userid) values (51, 24, 32, '24cbe06f-3212-40d2-ad4e-90f6255502ef');
+insert into courses (courseid, creation_time, course_time, userid) values (52, 21, 56, '560a1acb-8f82-499d-b2b6-5691c3612e5b');
+insert into courses (courseid, creation_time, course_time, userid) values (53, 52, 34, '8fc23b5b-32f6-4b43-9afd-60cfbcb864f5');
+insert into courses (courseid, creation_time, course_time, userid) values (54, 57, 32, 'a28f682f-1f97-489d-98e9-fec1918fef24');
+insert into courses (courseid, creation_time, course_time, userid) values (55, 31, 53, '2e16ae65-38ae-4952-8bb3-8ae400da01cd');
+insert into courses (courseid, creation_time, course_time, userid) values (56, 28, 52, 'daf39983-aca9-48bd-9f59-963d87215299');
+insert into courses (courseid, creation_time, course_time, userid) values (57, 40, 57, '16964488-3c6a-44cd-a6b1-328751e40d0e');
+insert into courses (courseid, creation_time, course_time, userid) values (58, 21, 52, '0211d5fe-b6fe-402f-bb2e-7341138efa28');
+insert into courses (courseid, creation_time, course_time, userid) values (59, 43, 34, 'a2d09c03-f385-4671-86d1-bd84c1686f67');
+insert into courses (courseid, creation_time, course_time, userid) values (60, 24, 59, 'd292862d-42b0-49d2-9256-e32e56001b5d');
+insert into courses (courseid, creation_time, course_time, userid) values (61, 42, 39, '5655fd9a-9d89-428e-8ab5-f8c643d85611');
+insert into courses (courseid, creation_time, course_time, userid) values (62, 26, 59, 'e9f1340c-7bb3-480c-a7b1-6c1a976f3b36');
+insert into courses (courseid, creation_time, course_time, userid) values (63, 34, 44, 'e1e17ad4-884f-48cd-9722-d970bc136527');
+insert into courses (courseid, creation_time, course_time, userid) values (64, 33, 41, '82f68109-cbae-485f-9978-ca8462ff3875');
+insert into courses (courseid, creation_time, course_time, userid) values (65, 45, 59, '30772bc2-815d-454d-8f28-1fee5de2e380');
+insert into courses (courseid, creation_time, course_time, userid) values (66, 60, 59, '1c36c88b-e5a6-40cf-8612-a4c672f94523');
+insert into courses (courseid, creation_time, course_time, userid) values (67, 55, 33, 'f103d7c8-895d-443a-a95a-56d32cad5fec');

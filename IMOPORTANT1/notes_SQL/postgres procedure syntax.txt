@@ -1,0 +1,38 @@
+CREATE REPLACE FUNCTION account_type_count(account_type text) RETURNS integer
+
+LANGUAGE plpgsql
+
+AS $$
+
+  DECLARE account_count int;
+
+BEGIN
+
+
+
+  SELECT count(*) INTO account_count
+
+  FROM accounts
+
+  WHERE accounts.account_type = $1;
+
+
+
+  RETURN account_count;
+
+END;
+
+$$;
+
+
+
+https://www.enterprisedb.com/postgres-tutorials/everything-you-need-know-about-postgres-stored-procedures-and-functions
+
+https://www.c-sharpcorner.com/article/how-to-create-and-use-procedure-and-function-postgresql/
+
+https://www.postgresqltutorial.com/postgresql-plpgsql/
+
+https://www.postgresql.org/docs/9.6/plpgsql.html
+
+
+https://www.youtube.com/watch?v=qw--VYLpxG4

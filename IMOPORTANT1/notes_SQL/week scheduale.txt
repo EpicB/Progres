@@ -1,0 +1,8 @@
+10 - 12 
+er diagram to database
+12 - 2 
+freecodecamp scheduale
+2 - 4 
+plpgsql practice
+4 - 6
+c# and typescript docs 1 hour 1 hour

@@ -1,0 +1,10 @@
+dotnet new 
+
+will show all the templates that you can work with 
+
+
+dotnet new <name of the template> -n <name of project>
+
+dotnet new webapi -n first -->>> how i created the project in the course
+
+code -r first <--- <name of project>

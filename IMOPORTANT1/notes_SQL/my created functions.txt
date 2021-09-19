@@ -1,0 +1,27 @@
+create or replace function find_first(thename text) returns text as $$
+declare 
+useridvar student.userid%type;
+unamevar student.uname%type;
+agevar student.age%type;
+begin
+select userid,uname,age into useridvar,unamevar,agevar from student where uname = thename;
+RAISE NOTICE 'the id is % the username is % the age is %',useridvar,unamevar,agevar;
+end;
+$$ language plpgsql
+
+
+
+
+
+
+
+
+create or replace function getusernamess(thisname text) returns setof student as $$
+
+BEGIN 
+return query select * from student where uname = thisname;
+
+END;
+
+
+$$ language plpgsql

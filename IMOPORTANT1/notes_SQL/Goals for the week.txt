@@ -1,0 +1,19 @@
+
+install postgres and learn fully on postgres admin 
+
+
+1- create and mangage a school database
+
+
+2 - apply all the learned knowledge and learn more about the er diagram design 3 databases diagrams into actuall databases using sql 
+
+
+3 - package extensions (citext,uuid) << include the module for them and use in a simple project
+
+4 - apply all the learned project by combining it in c# or by using .net core framework
+
+
+5 - learn plpgsql and create 5 different types of procedures and call in them in each database 
+
+6- finish this https://www.youtube.com/watch?v=qw--VYLpxG4 << 
+

@@ -1,0 +1,110 @@
+CREATE TABLE products (
+ product_no integer,
+ name text,
+ price numeric CHECK (price > 0)
+);
+ 
+
+the check operator will evaluate the condition and see if the value that is going to the that row is valid 
+
+CREATE TABLE products (
+ product_no integer,
+ name text,
+ price numeric CONSTRAINT positive_price CHECK (price > 0)
+);
+
+you can give a CONSTRAINT a name using the keyword it allows you to refer to the value that didnt pass the check of the constraint
+
+
+CREATE TABLE products (
+ product_no integer,
+ name text,
+ price numeric CHECK (price > 0),
+ discounted_price numeric CHECK (discounted_price > 0),
+ CHECK (price > discounted_price)
+);
+
+
+
+the first and 2nd constraint are column constraints the third one is a table constraint it refers to the whole table
+ 
+the above example can be written as the following 
+
+CREATE TABLE products (
+ product_no integer,
+ name text,
+ price numeric,
+ CHECK (price > 0),
+ discounted_price numeric,
+ CHECK (discounted_price > 0),
+ CHECK (price > discounted_price)
+);
+or even:
+CREATE TABLE products (
+ product_no integer,
+ name text,
+ price numeric CHECK (price > 0),
+ discounted_price numeric,
+ CHECK (discounted_price > 0 AND price > discounted_price)
+);
+
+
+column constraints can be written as table constraints the reverese might not be possible 
+
+the check constraint is satisfied when the check is evaluated to ( true or null )
+
+
+the not null constraint ensures that the value that is evaluated in a column (cant be null)
+
+functionally
+equivalent to creating a check constraint CHECK (column_name IS NOT NULL)
+
+
+CREATE TABLE products (
+ product_no integer NOT NULL,
+ name text NOT NULL,
+ price numeric NOT NULL CHECK (price > 0)
+);
+
+you can combine different constraints the order of the constraints dont matter and doesnt effect the values 
+
+CREATE TABLE products (
+ product_no integer UNIQUE,
+ name text,
+ price numeric
+);
+
+unique constraint will make sure that the same value doesnt appear in a column 
+
+
+can be written as a table constraint 
+
+CREATE TABLE example (
+ a integer
+ b integer,
+ c integer,
+ UNIQUE (a, c) // a and c column are unique 
+);
+
+
+CREATE TABLE products (
+ product_no integer UNIQUE NOT NULL,
+ name text,
+ price numeric
+);
+
+CREATE TABLE products (
+ product_no integer PRIMARY KEY,
+ name text,
+ price numeric
+);
+
+primary key constraint applies both unique and not null 
+
+
+foreign keys 
+
+
+can be used to represent one to many relations 
+
+

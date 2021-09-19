@@ -1,0 +1,152 @@
+Variable creating
+
+
+
+DECLARE 
+
+variable_name type := value;
+
+
+Case statement syntax -*-*-*-*---*-*-*-*-*---*--*-
+
+
+you re asign a variable value 
+
+
+
+exmaple
+
+DECLARE 
+
+v_salary integer;
+
+BEGIN 
+v_salary := case v_job_code 
+	when 'something' then 0.2 --asign 0.2 to the variable v_salary
+	else 0
+	end;		
+end;
+
+other option *-*-*-*-*--**-*-*-*-*-*--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*--*
+v_salary integer;
+
+BEGIN 
+v_salary := case  
+	when v_job_code = 'something' then 0.2 --asign 0.2 to the variable v_salary
+	else 0
+	end;		
+end;
+
+another option  *-*-*-*-*--**-*-*-*-*-*--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*--*
+
+BEGIN 
+v_salary := case  
+	when v_job_code in ('something1','something2') then 0.2 --asign 0.2 to the variable v_salary
+	else 0
+	end;		
+end;
+
+another option  *-*-*-*-*--**-*-*-*-*-*--*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*--*
+BEGIN 
+ case  
+	when v_job_code in ('something1','something2') then 
+	do soemthing
+ 	when v_job_code in ('something1','something2') then 
+	do something else
+	else 
+	do something else
+	end case ;		
+end;
+
+
+if statements syntax *-*-**-*--*-*-*-*-**-*-*-*-*-*-
+
+
+Declare
+
+v_number number := 30;
+
+BEGIN
+if v_number <10 then 
+
+RAISE NOTICE 'number is > 0  %', v_number ;
+  
+elsif v_number <20 then 
+
+RAISE NOTICE 'number is >10 %', v_number ;
+elseif v_number <30 then
+RAISE NOTICE 'number is > 20  %', v_number ;
+
+else
+RAISE NOTICE 'number is  %', v_number ; 
+
+end if;
+
+LOOP SYNTAX *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+
+DECLARE 
+
+v_counter number(2) := 1;
+
+begin 
+
+ loop 
+	RAISE NOTICE 'counter is : %',v_counter;
+	v_counter := v_counter+1;
+	if v_counter = 10 then 
+	  exit;
+	end if;
+	end loop;
+end;
+
+
+WHILE LOOP SYNTAX *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+
+DECLARE 
+v_counter number(2) :=1
+BEGIN 
+while v_counter <= 10 loop
+	RAISE NOTICE 'counter is : %' ,v_counter;
+	v_counter := v_counter +1;
+exit when v_counter >3;
+end loop;
+end;
+
+
+FOR LOOP SYNTAX *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*
+
+
+begin 
+
+	for i in 1..3 loop 
+	RAISE NOTICE 'counter is : %',i;
+	end loop ;
+
+end;
+
+
+
+HOW TO USE SQL IN PL/SQL *-*-*-*-*-*-*-*-*-*--**-*-*-*-**-*-*-*-*-*-*-*-*-*-*-*-*
+
+THE QUERY MUST RETURN ONLY ONE ROW
+
+
+
+DECLARE 
+
+v_name varhar(50);
+
+v_salary employees.salary&type -- CAN BE USED TO FIND THE TYPE OF THE VARIABLE FROM THE TABLE
+
+
+BEGIN 
+
+select firstname,lastname into v_name, v_salary from employees where employee_id = 100;
+
+RAISE NOTICE 'the salary is % the name is %',v_salary,v_name;
+
+
+
+

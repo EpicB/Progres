@@ -1,0 +1,1056 @@
+2021-09-14 10:22:29.339 +03 [5972] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-09-14 10:24:18.926 +03 [6064] FATAL:  password authentication failed for user "postgres"
+2021-09-14 10:24:18.926 +03 [6064] DETAIL:  Connection matched pg_hba.conf line 88: "host    all             all             ::1/128                 scram-sha-256"
+2021-09-14 10:36:17.859 +03 [6364] ERROR:  syntax error at or near "number" at character 19
+2021-09-14 10:36:17.859 +03 [6364] STATEMENT:  DECLARE 
+	VAR_TEST number := 36;
+	
+	if VAR_TEST > 30 then 
+	RAISE NOTICE ("hello");
+2021-09-14 10:36:27.044 +03 [6364] ERROR:  syntax error at or near "int" at character 19
+2021-09-14 10:36:27.044 +03 [6364] STATEMENT:  DECLARE 
+	VAR_TEST int := 36;
+	
+	if VAR_TEST > 30 then 
+	RAISE NOTICE ("hello");
+2021-09-14 10:36:35.638 +03 [6364] ERROR:  syntax error at or near "int" at character 19
+2021-09-14 10:36:35.638 +03 [6364] STATEMENT:  DECLARE 
+	VAR_TEST int = 36;
+	
+	if VAR_TEST > 30 then 
+	RAISE NOTICE ("hello");
+2021-09-14 10:38:56.125 +03 [6364] ERROR:  syntax error at or near "integer" at character 19
+2021-09-14 10:38:56.125 +03 [6364] STATEMENT:  DECLARE 
+	VAR_TEST integer = 36;
+	
+	if VAR_TEST > 30 then 
+	RAISE NOTICE ("hello");
+2021-09-14 10:39:14.938 +03 [6364] ERROR:  syntax error at or near "integer" at character 18
+2021-09-14 10:39:14.938 +03 [6364] STATEMENT:  DECLARE 
+	numbers integer = 36;
+	
+	if VAR_TEST > 30 then 
+	RAISE NOTICE ("hello");
+2021-09-14 10:39:24.517 +03 [6364] ERROR:  syntax error at or near "numbers" at character 3
+2021-09-14 10:39:24.517 +03 [6364] STATEMENT:   
+	numbers integer = 36;
+	
+	if VAR_TEST > 30 then 
+	RAISE NOTICE ("hello");
+2021-09-14 10:40:06.877 +03 [6364] ERROR:  syntax error at or near "integer" at character 18
+2021-09-14 10:40:06.877 +03 [6364] STATEMENT:  DECLARE 
+	numbers integer = 36;
+	
+	if VAR_TEST > 30 then 
+	RAISE NOTICE 'Quantity here is %', numbers;
+2021-09-14 10:40:29.524 +03 [6364] ERROR:  syntax error at or near "integer" at character 19
+2021-09-14 10:40:29.524 +03 [6364] STATEMENT:  DECLARE 
+		numbers integer = 36;
+	
+	if VAR_TEST > 30 then 
+	RAISE NOTICE 'Quantity here is %', numbers;
+2021-09-14 10:40:48.776 +03 [6364] ERROR:  syntax error at or near "integer" at character 18
+2021-09-14 10:40:48.776 +03 [6364] STATEMENT:  DECLARE 
+	numbers integer = 36;
+	BEGIN
+	if VAR_TEST > 30 then 
+	RAISE NOTICE 'Quantity here is %', numbers;
+	END;
+2021-09-14 10:40:55.946 +03 [6364] ERROR:  syntax error at or near "INTEGER" at character 18
+2021-09-14 10:40:55.946 +03 [6364] STATEMENT:  DECLARE 
+	numbers INTEGER = 36;
+	BEGIN
+	if VAR_TEST > 30 then 
+	RAISE NOTICE 'Quantity here is %', numbers;
+	END;
+2021-09-14 10:41:01.359 +03 [6364] ERROR:  syntax error at or near "INTEGER" at character 18
+2021-09-14 10:41:01.359 +03 [6364] STATEMENT:  DECLARE 
+	numbers INTEGER := 36;
+	BEGIN
+	if VAR_TEST > 30 then 
+	RAISE NOTICE 'Quantity here is %', numbers;
+	END;
+2021-09-14 10:41:18.435 +03 [6364] ERROR:  syntax error at or near "integer" at character 19
+2021-09-14 10:41:18.435 +03 [6364] STATEMENT:  DECLARE 
+	 numbers integer := 80;
+	BEGIN
+	if VAR_TEST > 30 then 
+	RAISE NOTICE 'Quantity here is %', numbers;
+	END;
+2021-09-14 10:41:24.453 +03 [6364] ERROR:  syntax error at or near "integer" at character 18
+2021-09-14 10:41:24.453 +03 [6364] STATEMENT:  DECLARE 
+	numbers integer := 80;
+	BEGIN
+	if VAR_TEST > 30 then 
+	RAISE NOTICE 'Quantity here is %', numbers;
+	END;
+2021-09-14 10:42:45.107 +03 [6364] ERROR:  syntax error at or near "returns" at character 34
+2021-09-14 10:42:45.107 +03 [6364] STATEMENT:  
+	Create or replace function test returns integer as $$
+	DECLARE 
+	numbers integer := 80;
+	BEGIN
+	if VAR_TEST > 30 then 
+	RAISE NOTICE 'Quantity here is %', numbers;
+	END;
+2021-09-14 10:43:00.194 +03 [6364] ERROR:  unterminated dollar-quoted string at or near "$$
+	DECLARE 
+	numbers integer := 80;
+	BEGIN
+	if VAR_TEST > 30 then 
+	RAISE NOTICE 'Quantity here is %', numbers;
+	END;" at character 55
+2021-09-14 10:43:00.194 +03 [6364] STATEMENT:  
+	Create or replace function test() returns integer as $$
+	DECLARE 
+	numbers integer := 80;
+	BEGIN
+	if VAR_TEST > 30 then 
+	RAISE NOTICE 'Quantity here is %', numbers;
+	END;
+2021-09-14 10:43:12.675 +03 [6364] ERROR:  syntax error at or near "DECLARE" at character 53
+2021-09-14 10:43:12.675 +03 [6364] STATEMENT:  
+	Create or replace function test() returns integer 
+	DECLARE 
+	numbers integer := 80;
+	BEGIN
+	if VAR_TEST > 30 then 
+	RAISE NOTICE 'Quantity here is %', numbers;
+	END;
+2021-09-14 10:44:26.877 +03 [6364] ERROR:  syntax error at or near "DECLARE" at character 53
+2021-09-14 10:44:26.877 +03 [6364] STATEMENT:  
+	Create or replace function test() returns integer 
+	DECLARE 
+	numbers integer := 80;
+	BEGIN
+	if numbers > 30 then 
+	RAISE NOTICE 'Quantity here is %', numbers;
+	END;
+2021-09-14 10:44:32.451 +03 [6364] ERROR:  syntax error at or near "integer" at character 19
+2021-09-14 10:44:32.451 +03 [6364] STATEMENT:  
+	DECLARE 
+	numbers integer := 80;
+	BEGIN
+	if numbers > 30 then 
+	RAISE NOTICE 'Quantity here is %', numbers;
+	END;
+2021-09-14 10:44:41.347 +03 [6364] ERROR:  syntax error at or near "integer" at character 20
+2021-09-14 10:44:41.347 +03 [6364] STATEMENT:  
+	DECLARE 
+		numbers integer := 80;
+	BEGIN
+	if numbers > 30 then 
+	RAISE NOTICE 'Quantity here is %', numbers;
+	END;
+2021-09-14 10:44:44.824 +03 [6364] ERROR:  syntax error at or near "integer" at character 20
+2021-09-14 10:44:44.824 +03 [6364] STATEMENT:  
+	DECLARE 
+		numbers integer := 80;
+	BEGIN
+		if numbers > 30 then 
+		RAISE NOTICE 'Quantity here is %', numbers;
+	END;
+2021-09-14 10:45:35.275 +03 [6364] ERROR:  syntax error at or near "numbers" at character 21
+2021-09-14 10:45:35.275 +03 [6364] STATEMENT:  
+	DECLARE 
+		variable numbers integer := 80;
+	BEGIN
+		if numbers > 30 then 
+		RAISE NOTICE 'Quantity here is %', numbers;
+	END;
+2021-09-14 10:46:11.051 +03 [6364] ERROR:  syntax error at or near "integer" at character 21
+2021-09-14 10:46:11.051 +03 [6364] STATEMENT:  
+	DECLARE 
+	  numbers integer := 80;
+	BEGIN
+		if numbers > 30 then 
+		RAISE NOTICE 'Quantity here is %', numbers;
+	END;
+2021-09-14 10:46:47.186 +03 [6364] ERROR:  syntax error at or near "variable" at character 1
+2021-09-14 10:46:47.186 +03 [6364] STATEMENT:  variable numbers := 30;
+	BEGIN
+		if numbers > 30 then 
+		RAISE NOTICE 'Quantity here is %', numbers;
+	END;
+2021-09-14 10:47:46.970 +03 [6364] ERROR:  syntax error at or near ":=" at character 16
+2021-09-14 10:47:46.970 +03 [6364] STATEMENT:  declare
+	numbers:= 10;
+	BEGIN
+		if numbers > 30 then 
+		RAISE NOTICE 'Quantity here is %', numbers;
+	END;
+2021-09-14 10:47:50.992 +03 [6364] ERROR:  syntax error at or near ":=" at character 17
+2021-09-14 10:47:50.992 +03 [6364] STATEMENT:  declare
+	numbers := 10;
+	BEGIN
+		if numbers > 30 then 
+		RAISE NOTICE 'Quantity here is %', numbers;
+	END;
+2021-09-14 10:48:10.122 +03 [6364] ERROR:  syntax error at or near ":=" at character 17
+2021-09-14 10:48:10.122 +03 [6364] STATEMENT:  DECLARE
+	numbers := 10;
+	BEGIN
+		if numbers > 30 then 
+		RAISE NOTICE 'Quantity here is %', numbers;
+	END;
+2021-09-14 10:48:26.696 +03 [6364] ERROR:  syntax error at or near ":=" at character 17
+2021-09-14 10:48:26.696 +03 [6364] STATEMENT:  DECLARE
+	numbers := 50;
+	BEGIN
+		if numbers > 30 then 
+		RAISE NOTICE 'Quantity here is %', numbers;
+	END;
+2021-09-14 10:49:23.696 +03 [6364] ERROR:  syntax error at or near "integer" at character 17
+2021-09-14 10:49:23.696 +03 [6364] STATEMENT:  DECLARE
+	numbers integer := 50;
+	BEGIN
+		if numbers > 30 then 
+		RAISE NOTICE 'Quantity here is %', numbers;
+	END;
+2021-09-14 10:49:31.338 +03 [6364] ERROR:  syntax error at or near "real" at character 17
+2021-09-14 10:49:31.338 +03 [6364] STATEMENT:  DECLARE
+	numbers real := 50;
+	BEGIN
+		if numbers > 30 then 
+		RAISE NOTICE 'Quantity here is %', numbers;
+	END;
+2021-09-14 10:50:43.923 +03 [6364] ERROR:  syntax error at or near "number" at character 17
+2021-09-14 10:50:43.923 +03 [6364] STATEMENT:  DECLARE
+	numbers number := 50;
+	BEGIN
+		if numbers > 30 then 
+		RAISE NOTICE 'Quantity here is %', numbers;
+	END;
+2021-09-14 10:54:51.796 +03 [6364] ERROR:  syntax error at or near "integer" at character 17
+2021-09-14 10:54:51.796 +03 [6364] STATEMENT:  DECLARE
+	numbers integer ;
+	BEGIN
+		if numbers > 30 then 
+		RAISE NOTICE 'Quantity here is %', numbers;
+	END;
+2021-09-14 10:54:59.681 +03 [6364] ERROR:  syntax error at or near "integer" at character 17
+2021-09-14 10:54:59.681 +03 [6364] STATEMENT:  DECLARE
+	numbers integer;
+	BEGIN
+		if numbers > 30 then 
+		RAISE NOTICE 'Quantity here is %', numbers;
+	END;
+2021-09-14 12:44:56.877 +03 [6364] ERROR:  syntax error at or near "a" at character 19
+2021-09-14 12:44:56.877 +03 [6364] STATEMENT:  create or replace a function find_first(thename text) returns text as $$
+	declare 
+	useridvar student.userid%type;
+	unamevar student.uname%type;
+	agevar student.age%type;
+	begin
+	select userid,uname,age into useridvar,unamevar,agevar from students where uname = thename;
+	RAISE NOTICE 'the id is % the username is % the age is %';
+	end;
+	
+	
+2021-09-14 12:45:03.656 +03 [6364] ERROR:  unterminated dollar-quoted string at or near "$$
+	declare 
+	useridvar student.userid%type;
+	unamevar student.uname%type;
+	agevar student.age%type;
+	begin
+	select userid,uname,age into useridvar,unamevar,agevar from students where uname = thename;
+	RAISE NOTICE 'the id is % the username is % the age is %';
+	end;
+	
+	" at character 69
+2021-09-14 12:45:03.656 +03 [6364] STATEMENT:  create or replace function find_first(thename text) returns text as $$
+	declare 
+	useridvar student.userid%type;
+	unamevar student.uname%type;
+	agevar student.age%type;
+	begin
+	select userid,uname,age into useridvar,unamevar,agevar from students where uname = thename;
+	RAISE NOTICE 'the id is % the username is % the age is %';
+	end;
+	
+	
+2021-09-14 12:47:17.542 +03 [6364] ERROR:  unterminated dollar-quoted string at or near "$void$
+	declare 
+	useridvar student.userid%type;
+	unamevar student.uname%type;
+	agevar student.age%type;
+	begin
+	select userid,uname,age into useridvar,unamevar,agevar from students where uname = thename;
+	RAISE NOTICE 'the id is % the username is % the age is %';
+	end;
+	
+	" at character 69
+2021-09-14 12:47:17.542 +03 [6364] STATEMENT:  create or replace function find_first(thename text) returns text as $void$
+	declare 
+	useridvar student.userid%type;
+	unamevar student.uname%type;
+	agevar student.age%type;
+	begin
+	select userid,uname,age into useridvar,unamevar,agevar from students where uname = thename;
+	RAISE NOTICE 'the id is % the username is % the age is %';
+	end;
+	
+	
+2021-09-14 12:47:31.815 +03 [6364] ERROR:  syntax error at or near "$" at character 69
+2021-09-14 12:47:31.815 +03 [6364] STATEMENT:  create or replace function find_first(thename text) returns text as $'helo'$
+	declare 
+	useridvar student.userid%type;
+	unamevar student.uname%type;
+	agevar student.age%type;
+	begin
+	select userid,uname,age into useridvar,unamevar,agevar from students where uname = thename;
+	RAISE NOTICE 'the id is % the username is % the age is %';
+	end;
+	
+	
+2021-09-14 12:47:40.452 +03 [6364] ERROR:  unterminated dollar-quoted string at or near "$helo$
+	declare 
+	useridvar student.userid%type;
+	unamevar student.uname%type;
+	agevar student.age%type;
+	begin
+	select userid,uname,age into useridvar,unamevar,agevar from students where uname = thename;
+	RAISE NOTICE 'the id is % the username is % the age is %';
+	end;
+	
+	" at character 69
+2021-09-14 12:47:40.452 +03 [6364] STATEMENT:  create or replace function find_first(thename text) returns text as $helo$
+	declare 
+	useridvar student.userid%type;
+	unamevar student.uname%type;
+	agevar student.age%type;
+	begin
+	select userid,uname,age into useridvar,unamevar,agevar from students where uname = thename;
+	RAISE NOTICE 'the id is % the username is % the age is %';
+	end;
+	
+	
+2021-09-14 12:48:33.816 +03 [6364] ERROR:  unterminated dollar-quoted string at or near "$$
+	declare 
+	useridvar student.userid%type;
+	unamevar student.uname%type;
+	agevar student.age%type;
+	begin
+	select userid,uname,age into useridvar,unamevar,agevar from students where uname = thename;
+	RAISE NOTICE 'the id is % the username is % the age is %';
+	end;
+	
+	" at character 69
+2021-09-14 12:48:33.816 +03 [6364] STATEMENT:  create or replace function find_first(thename text) returns void as $$
+	declare 
+	useridvar student.userid%type;
+	unamevar student.uname%type;
+	agevar student.age%type;
+	begin
+	select userid,uname,age into useridvar,unamevar,agevar from students where uname = thename;
+	RAISE NOTICE 'the id is % the username is % the age is %';
+	end;
+	
+	
+2021-09-14 12:49:58.469 +03 [6364] ERROR:  syntax error at or near "as" at character 62
+2021-09-14 12:49:58.469 +03 [6364] STATEMENT:  create or replace function find_first(thename text) returns  as $$
+	declare 
+	useridvar student.userid%type;
+	unamevar student.uname%type;
+	agevar student.age%type;
+	begin
+	select userid,uname,age into useridvar,unamevar,agevar from students where uname = thename;
+	RAISE NOTICE 'the id is % the username is % the age is %';
+	end;
+	$$ language plpgsql
+2021-09-14 12:50:04.516 +03 [6364] ERROR:  too few parameters specified for RAISE
+2021-09-14 12:50:04.516 +03 [6364] CONTEXT:  compilation of PL/pgSQL function "find_first" near line 8
+2021-09-14 12:50:04.516 +03 [6364] STATEMENT:  create or replace function find_first(thename text) returns text as $$
+	declare 
+	useridvar student.userid%type;
+	unamevar student.uname%type;
+	agevar student.age%type;
+	begin
+	select userid,uname,age into useridvar,unamevar,agevar from students where uname = thename;
+	RAISE NOTICE 'the id is % the username is % the age is %';
+	end;
+	$$ language plpgsql
+2021-09-14 12:51:28.088 +03 [11764] ERROR:  column "ahmad" does not exist at character 19
+2021-09-14 12:51:28.088 +03 [11764] STATEMENT:  select find_first(ahmad)
+	;
+2021-09-14 12:51:57.312 +03 [11764] ERROR:  relation "students" does not exist at character 61
+2021-09-14 12:51:57.312 +03 [11764] QUERY:  select userid,uname,age                                from students where uname = thename
+2021-09-14 12:51:57.312 +03 [11764] CONTEXT:  PL/pgSQL function find_first(text) line 7 at SQL statement
+2021-09-14 12:51:57.312 +03 [11764] STATEMENT:  select find_first('ahmad')
+	;
+2021-09-14 12:52:17.327 +03 [11764] ERROR:  control reached end of function without RETURN
+2021-09-14 12:52:17.327 +03 [11764] CONTEXT:  PL/pgSQL function find_first(text)
+2021-09-14 12:52:17.327 +03 [11764] STATEMENT:  select find_first('ahmad');
+2021-09-14 12:52:57.135 +03 [11764] ERROR:  control reached end of function without RETURN
+2021-09-14 12:52:57.135 +03 [11764] CONTEXT:  PL/pgSQL function find_first(text)
+2021-09-14 12:52:57.135 +03 [11764] STATEMENT:  select find_first('test');
+2021-09-14 12:55:52.075 +03 [11832] ERROR:  unterminated dollar-quoted string at or near "$$
+	declare 
+	-- variable declaration
+	begin
+	select * from student
+	end;" at character 94
+2021-09-14 12:55:52.075 +03 [11832] STATEMENT:  create or replace function getusernames()
+	   returns setof student 
+	   language plpgsql
+	  as
+	$$
+	declare 
+	-- variable declaration
+	begin
+	select * from student
+	end;
+2021-09-14 12:55:56.708 +03 [11832] ERROR:  syntax error at or near "declare" at character 94
+2021-09-14 12:55:56.708 +03 [11832] STATEMENT:  create or replace function getusernames()
+	   returns setof student 
+	   language plpgsql
+	  as
+	declare 
+	-- variable declaration
+	begin
+	select * from student
+	end;
+2021-09-14 12:56:12.270 +03 [11832] ERROR:  syntax error at or near "begin" at character 95
+2021-09-14 12:56:12.270 +03 [11832] STATEMENT:  create or replace function getusernames()
+	   returns setof student 
+	   language plpgsql
+	  as
+	
+	begin
+	select * from student
+	end;
+2021-09-14 12:56:13.755 +03 [11832] ERROR:  syntax error at or near "begin" at character 95
+2021-09-14 12:56:13.755 +03 [11832] STATEMENT:  create or replace function getusernames()
+	   returns setof student 
+	   language plpgsql
+	  as
+	
+	begin
+	select * from student
+	end;
+2021-09-14 12:56:14.456 +03 [11832] ERROR:  syntax error at or near "begin" at character 95
+2021-09-14 12:56:14.456 +03 [11832] STATEMENT:  create or replace function getusernames()
+	   returns setof student 
+	   language plpgsql
+	  as
+	
+	begin
+	select * from student
+	end;
+2021-09-14 12:56:26.925 +03 [11832] ERROR:  syntax error at or near "begin" at character 94
+2021-09-14 12:56:26.925 +03 [11832] STATEMENT:  create or replace function getusernames()
+	   returns setof student 
+	   language plpgsql
+	  as
+	begin 
+	select * from student;
+	end;
+2021-09-14 12:58:18.353 +03 [11764] ERROR:  query has no destination for result data
+2021-09-14 12:58:18.353 +03 [11764] HINT:  If you want to discard the results of a SELECT, use PERFORM instead.
+2021-09-14 12:58:18.353 +03 [11764] CONTEXT:  PL/pgSQL function getusernames() line 3 at SQL statement
+2021-09-14 12:58:18.353 +03 [11764] STATEMENT:  select getusernames()
+	;
+2021-09-14 12:59:09.300 +03 [11832] ERROR:  syntax error at or near "returns" at character 86
+2021-09-14 12:59:09.300 +03 [11832] STATEMENT:  create or replace function getusernames()
+	   returns setof student 
+	  as
+	  $$
+	begin 
+	returns query select * from student;
+	end;
+	$$ language plpgsql
+2021-09-14 12:59:14.250 +03 [11832] ERROR:  syntax error at or near "return5" at character 86
+2021-09-14 12:59:14.250 +03 [11832] STATEMENT:  create or replace function getusernames()
+	   returns setof student 
+	  as
+	  $$
+	begin 
+	return5 query select * from student;
+	end;
+	$$ language plpgsql
+2021-09-14 13:23:08.821 +03 [11764] ERROR:  syntax error at or near "getusernames" at character 1
+2021-09-14 13:23:08.821 +03 [11764] STATEMENT:  getusernames('ahmad')
+	;
+2021-09-14 13:23:36.149 +03 [11764] ERROR:  syntax error at or near "getusernames" at character 1
+2021-09-14 13:23:36.149 +03 [11764] STATEMENT:  getusernames('ahmad')
+	;
+2021-09-14 13:24:29.901 +03 [11764] ERROR:  syntax error at or near "getusernames" at character 1
+2021-09-14 13:24:29.901 +03 [11764] STATEMENT:  getusernames('ahmad')
+	;
+2021-09-14 13:27:36.862 +03 [11764] ERROR:  control reached end of function without RETURN
+2021-09-14 13:27:36.862 +03 [11764] CONTEXT:  PL/pgSQL function find_first(text)
+2021-09-14 13:27:36.862 +03 [11764] STATEMENT:  select find_first('test');
+2021-09-14 13:45:03.239 +03 [5240] ERROR:  syntax error at or near "$$
+	
+	BEGIN 
+	return query select * from student where uname = thisname;
+	
+	END;
+	
+	
+	$$" at character 79
+2021-09-14 13:45:03.239 +03 [5240] STATEMENT:  create or replace function getusernamess(thisname text) returns setof student $$
+	
+	BEGIN 
+	return query select * from student where uname = thisname;
+	
+	END;
+	
+	
+	$$ language plpgsql
+	
+2021-09-14 14:00:06.844 +03 [11764] ERROR:  syntax error at or near "ll" at character 1
+2021-09-14 14:00:06.844 +03 [11764] STATEMENT:  ll
+	;
+2021-09-14 14:09:07.927 +03 [10888] ERROR:  syntax error at or near "[" at character 8
+2021-09-14 14:09:07.927 +03 [10888] STATEMENT:  create [or replace] procedure insertshortcut(unamevar student.uname%type,agevar student.age%type )
+	
+	language plpgsql
+	as $$
+	begin
+	insert into student(userid,uname,age)values(uuid_generate_v4(),unamevar,agevar);
+	end; $$
+	
+2021-09-14 14:09:57.763 +03 [11764] ERROR:  syntax error at or near "selecty" at character 1
+2021-09-14 14:09:57.763 +03 [11764] STATEMENT:  selecty insertshortcut('mahmoud',18);
+2021-09-14 14:10:01.539 +03 [11764] ERROR:  insertshortcut(unknown, integer) is a procedure at character 8
+2021-09-14 14:10:01.539 +03 [11764] HINT:  To call a procedure, use CALL.
+2021-09-14 14:10:01.539 +03 [11764] STATEMENT:  select insertshortcut('mahmoud',18);
+2021-09-14 14:33:37.698 +03 [11764] ERROR:  column "getusernames" does not exist at character 8
+2021-09-14 14:33:37.698 +03 [11764] STATEMENT:  select getusernames
+	;
+2021-09-14 14:34:03.595 +03 [11764] ERROR:  control reached end of function without RETURN
+2021-09-14 14:34:03.595 +03 [11764] CONTEXT:  PL/pgSQL function find_first(text)
+2021-09-14 14:34:03.595 +03 [11764] STATEMENT:  select find_first('ahmad');
+2021-09-14 14:34:45.209 +03 [10888] ERROR:  syntax error at or near "text" at character 62
+2021-09-14 14:34:45.209 +03 [10888] STATEMENT:  create or replace procedure find_first(thename text) returns text as $$
+	declare 
+	useridvar student.userid%type;
+	unamevar student.uname%type;
+	agevar student.age%type;
+	begin
+	select userid,uname,age into useridvar,unamevar,agevar from student where uname = thename;
+	RAISE NOTICE 'the id is % the username is % the age is %',useridvar,unamevar,agevar;
+	end;
+	$$ language plpgsql
+	
+	
+2021-09-14 14:35:22.739 +03 [10888] ERROR:  function result type must be specified
+2021-09-14 14:35:22.739 +03 [10888] STATEMENT:  create or replace function find_first(thename text) as $$
+	declare 
+	useridvar student.userid%type;
+	unamevar student.uname%type;
+	agevar student.age%type;
+	begin
+	select userid,uname,age into useridvar,unamevar,agevar from student where uname = thename;
+	RAISE NOTICE 'the id is % the username is % the age is %',useridvar,unamevar,agevar;
+	end;
+	$$ language plpgsql
+	
+2021-09-14 14:35:24.297 +03 [10888] ERROR:  function result type must be specified
+2021-09-14 14:35:24.297 +03 [10888] STATEMENT:  create or replace function find_first(thename text) as $$
+	declare 
+	useridvar student.userid%type;
+	unamevar student.uname%type;
+	agevar student.age%type;
+	begin
+	select userid,uname,age into useridvar,unamevar,agevar from student where uname = thename;
+	RAISE NOTICE 'the id is % the username is % the age is %',useridvar,unamevar,agevar;
+	end;
+	$$ language plpgsql
+	
+2021-09-14 14:35:53.527 +03 [10888] ERROR:  function result type must be specified
+2021-09-14 14:35:53.527 +03 [10888] STATEMENT:  create or replace function find_first(thename text)
+	language plpgsql
+	as $$
+	declare 
+	useridvar student.userid%type;
+	unamevar student.uname%type;
+	agevar student.age%type;
+	begin
+	select userid,uname,age into useridvar,unamevar,agevar from student where uname = thename;
+	RAISE NOTICE 'the id is % the username is % the age is %',useridvar,unamevar,agevar;
+	end;
+	$$ 
+	
+2021-09-14 14:36:00.765 +03 [10888] ERROR:  cannot change routine kind
+2021-09-14 14:36:00.765 +03 [10888] DETAIL:  "find_first" is a function.
+2021-09-14 14:36:00.765 +03 [10888] STATEMENT:  create or replace procedure find_first(thename text)
+	language plpgsql
+	as $$
+	declare 
+	useridvar student.userid%type;
+	unamevar student.uname%type;
+	agevar student.age%type;
+	begin
+	select userid,uname,age into useridvar,unamevar,agevar from student where uname = thename;
+	RAISE NOTICE 'the id is % the username is % the age is %',useridvar,unamevar,agevar;
+	end;
+	$$ 
+	
+2021-09-14 14:36:30.522 +03 [11764] ERROR:  syntax error at or near "find_first_new" at character 1
+2021-09-14 14:36:30.522 +03 [11764] STATEMENT:  find_first_new('ahmad')
+	;
+2021-09-14 14:52:31.689 +03 [11764] ERROR:  function get_film(unknown) does not exist at character 8
+2021-09-14 14:52:31.689 +03 [11764] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2021-09-14 14:52:31.689 +03 [11764] STATEMENT:  select get_film ('ahmad');
+2021-09-14 15:01:33.049 +03 [11764] ERROR:  syntax error at or near "insertshortcut" at character 1
+2021-09-14 15:01:33.049 +03 [11764] STATEMENT:  insertshortcut('ahamd',17);
+2021-09-14 15:02:37.121 +03 [11764] ERROR:  syntax error at or near "get_name" at character 1
+2021-09-14 15:02:37.121 +03 [11764] STATEMENT:  get_name('ahmad');
+2021-09-14 15:02:40.705 +03 [11764] ERROR:  get_name(unknown) is not a procedure at character 6
+2021-09-14 15:02:40.705 +03 [11764] HINT:  To call a function, use SELECT.
+2021-09-14 15:02:40.705 +03 [11764] STATEMENT:  call get_name('ahmad');
+2021-09-14 15:03:15.473 +03 [11764] ERROR:  syntax error at or near "insertshortcut" at character 1
+2021-09-14 15:03:15.473 +03 [11764] STATEMENT:  insertshortcut('ahmad',17);
+2021-09-14 15:03:22.681 +03 [11764] ERROR:  get_name(unknown) is not a procedure at character 6
+2021-09-14 15:03:22.681 +03 [11764] HINT:  To call a function, use SELECT.
+2021-09-14 15:03:22.681 +03 [11764] STATEMENT:  call get_name('ahmad');
+2021-09-14 15:25:14.240 +03 [11764] ERROR:  function getusername() does not exist at character 8
+2021-09-14 15:25:14.240 +03 [11764] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2021-09-14 15:25:14.240 +03 [11764] STATEMENT:  select getusername();
+2021-09-14 15:25:42.256 +03 [11764] ERROR:  syntax error at or near "select" at character 25
+2021-09-14 15:25:42.256 +03 [11764] STATEMENT:  select get_name('test')
+	select get_name('ahamd');
+2021-09-14 15:27:31.224 +03 [11764] ERROR:  syntax error at or near "select" at character 30
+2021-09-14 15:27:31.224 +03 [11764] STATEMENT:  select getusernames('ahmad')
+	select find_first('ahmad');
+2021-09-14 15:27:40.824 +03 [11764] ERROR:  query "SELECT 'the id is % the username is % the age is %',useridvar,unamevar,agevar" returned 4 columns
+2021-09-14 15:27:40.824 +03 [11764] CONTEXT:  PL/pgSQL function find_first(text) line 8 at RETURN
+2021-09-14 15:27:40.824 +03 [11764] STATEMENT:  select find_first('ahmad');
+2021-09-14 15:28:18.824 +03 [11764] ERROR:  query "SELECT 'the id is % the username is % the age is %',useridvar,unamevar,agevar" returned 4 columns
+2021-09-14 15:28:18.824 +03 [11764] CONTEXT:  PL/pgSQL function find_first(text) line 8 at RETURN
+2021-09-14 15:28:18.824 +03 [11764] STATEMENT:  select find_first('ahmad');
+2021-09-14 15:44:32.514 +03 [8936] ERROR:  syntax error at or near ")" at character 149
+2021-09-14 15:44:32.514 +03 [8936] STATEMENT:  CREATE OR REPLACE PROCEDURE public.insertshortcut(
+		unamevar citext,
+		agevar integer DEFAULT NULL::integer,
+		inout userid  uuid default null::uuid,
+	)
+	LANGUAGE 'plpgsql'
+	AS $BODY$
+	begin
+	insert into student(uname,age)values(unamevar,agevar)
+	returning userid into userid;
+	end;
+	$BODY$;
+2021-09-14 15:44:54.190 +03 [11764] ERROR:  column reference "userid" is ambiguous at character 65
+2021-09-14 15:44:54.190 +03 [11764] DETAIL:  It could refer to either a PL/pgSQL variable or a table column.
+2021-09-14 15:44:54.190 +03 [11764] QUERY:  insert into student(uname,age)values(unamevar,agevar)
+	returning userid
+2021-09-14 15:44:54.190 +03 [11764] CONTEXT:  PL/pgSQL function insertshortcut(citext,integer,uuid) line 3 at SQL statement
+2021-09-14 15:44:54.190 +03 [11764] STATEMENT:  call insertshortcut('islam');
+2021-09-14 15:45:01.383 +03 [8936] ERROR:  procedure public.insertshortcut(citext, integer) does not exist
+2021-09-14 15:45:01.383 +03 [8936] STATEMENT:  DROP PROCEDURE public.insertshortcut(citext, integer);
+	
+2021-09-14 15:45:23.916 +03 [11764] ERROR:  column "id" does not exist at character 65
+2021-09-14 15:45:23.916 +03 [11764] QUERY:  insert into student(uname,age)values(unamevar,agevar)
+	returning id
+2021-09-14 15:45:23.916 +03 [11764] CONTEXT:  PL/pgSQL function insertshortcut(citext,integer,uuid) line 3 at SQL statement
+2021-09-14 15:45:23.916 +03 [11764] STATEMENT:  call insertshortcut('islam');
+2021-09-14 15:45:51.636 +03 [11764] ERROR:  column reference "userid" is ambiguous at character 65
+2021-09-14 15:45:51.636 +03 [11764] DETAIL:  It could refer to either a PL/pgSQL variable or a table column.
+2021-09-14 15:45:51.636 +03 [11764] QUERY:  insert into student(uname,age)values(unamevar,agevar)
+	returning userid
+2021-09-14 15:45:51.636 +03 [11764] CONTEXT:  PL/pgSQL function insertshortcut(citext,integer,uuid) line 3 at SQL statement
+2021-09-14 15:45:51.636 +03 [11764] STATEMENT:  call insertshortcut('islam');
+2021-09-14 15:48:03.577 +03 [8936] ERROR:  procedure public.insertshortcut(citext, integer) does not exist
+2021-09-14 15:48:03.577 +03 [8936] STATEMENT:   DROP PROCEDURE public.insertshortcut(citext, integer);
+2021-09-14 15:52:35.763 +03 [1560] ERROR:  "useridvar" is not a known variable at character 235
+2021-09-14 15:52:35.763 +03 [1560] STATEMENT:  CREATE OR REPLACE FUNCTION public.find_first(
+		thename citext)
+	    RETURNS table (id uuid , username citext , age integer)
+	    LANGUAGE 'plpgsql'
+	    COST 100
+	    VOLATILE PARALLEL UNSAFE
+	AS $BODY$
+	
+	begin
+	select userid,uname,age into useridvar,unamevar,agevar from student where uname = thename;
+	end;
+	$BODY$;
+	
+2021-09-14 15:52:48.064 +03 [1560] ERROR:  function public.find_first(text) does not exist
+2021-09-14 15:52:48.064 +03 [1560] STATEMENT:  DROP FUNCTION public.find_first(text);
+2021-09-14 15:52:59.864 +03 [1560] ERROR:  column reference "age" is ambiguous at character 21
+2021-09-14 15:52:59.864 +03 [1560] DETAIL:  It could refer to either a PL/pgSQL variable or a table column.
+2021-09-14 15:52:59.864 +03 [1560] QUERY:  select userid,uname,age from student where uname = thename
+2021-09-14 15:52:59.864 +03 [1560] CONTEXT:  PL/pgSQL function find_first(citext) line 4 at SQL statement
+2021-09-14 15:52:59.864 +03 [1560] STATEMENT:   select * from find_first('ahmad')
+2021-09-14 15:53:13.648 +03 [1560] ERROR:  function public.find_first(text) does not exist
+2021-09-14 15:53:13.648 +03 [1560] STATEMENT:  DROP FUNCTION public.find_first(text);
+2021-09-14 15:53:28.970 +03 [1560] ERROR:  query has no destination for result data
+2021-09-14 15:53:28.970 +03 [1560] HINT:  If you want to discard the results of a SELECT, use PERFORM instead.
+2021-09-14 15:53:28.970 +03 [1560] CONTEXT:  PL/pgSQL function find_first(citext) line 4 at SQL statement
+2021-09-14 15:53:28.970 +03 [1560] STATEMENT:   select * from find_first('ahmad')
+2021-09-14 15:53:43.016 +03 [1560] ERROR:  syntax error at or near "returns" at character 211
+2021-09-14 15:53:43.016 +03 [1560] STATEMENT:  CREATE OR REPLACE FUNCTION public.find_first(
+		thename citext)
+	    RETURNS table (id uuid , username citext , userage integer)
+	    LANGUAGE 'plpgsql'
+	    COST 100
+	    VOLATILE PARALLEL UNSAFE
+	AS $BODY$
+	
+	begin 
+	returns query 
+	select userid,uname,age from student where uname = thename;
+	end;
+	$BODY$;
+2021-09-14 15:58:42.597 +03 [11764] ERROR:  syntax error at or near "getusernamess" at character 10
+2021-09-14 15:58:42.597 +03 [11764] STATEMENT:  select * getusernamess('ahmad');
+2021-09-14 16:01:43.223 +03 [6840] ERROR:  column "userid" does not exist at character 8
+2021-09-14 16:01:43.223 +03 [6840] STATEMENT:  select userid , uname , 0 as age 
+2021-09-14 16:24:26.457 +03 [668] ERROR:  syntax error at or near "DEFAULT" at character 116
+2021-09-14 16:24:26.457 +03 [668] STATEMENT:  create or replace function getusernames_v2(thisname citext) 
+	returns table(_userid uuid,_uname citext,_age integer DEFAULT 0::integer, ) 
+	language plpgsql
+	as $$
+	begin
+	return query select userid , uname from student where uname = thisname ;
+	end;
+	
+	$$
+2021-09-14 16:29:06.276 +03 [668] ERROR:  syntax error at or near "DEFAULT" at character 116
+2021-09-14 16:29:06.276 +03 [668] STATEMENT:  create or replace function getusernames_v2(thisname citext) 
+	returns table(_userid uuid,_uname citext,_age integer DEFAULT 0::integer ) 
+	language plpgsql
+	as $$
+	begin
+	return query select userid , uname from student where uname = thisname ;
+	end;
+	$$
+2021-09-14 16:29:18.725 +03 [668] ERROR:  syntax error at or near "DEFAULT" at character 117
+2021-09-14 16:29:18.725 +03 [668] STATEMENT:  create or replace function getusernames_v2(thisname citext) 
+	returns table(_userid uuid,_uname citext, _age integer DEFAULT 0::integer ) 
+	language plpgsql
+	as $$
+	begin
+	return query select userid , uname from student where uname = thisname ;
+	end;
+	$$
+2021-09-14 16:31:20.159 +03 [668] ERROR:  syntax error at or near "DEFAULT" at character 117
+2021-09-14 16:31:20.159 +03 [668] STATEMENT:  create or replace function getusernames_v2(thisname citext) 
+	returns table(_userid uuid,_uname citext, _age integer DEFAULT 0 ) 
+	language plpgsql
+	as $$
+	begin
+	return query select userid , uname from student where uname = thisname ;
+	end;
+	$$
+2021-09-14 16:32:34.783 +03 [11764] ERROR:  getusernames_v2(unknown) is not a procedure at character 6
+2021-09-14 16:32:34.783 +03 [11764] HINT:  To call a function, use SELECT.
+2021-09-14 16:32:34.783 +03 [11764] STATEMENT:  call getusernames_v2('ahmad');
+2021-09-14 16:32:40.828 +03 [11764] ERROR:  structure of query does not match function result type
+2021-09-14 16:32:40.828 +03 [11764] DETAIL:  Number of returned columns (2) does not match expected column count (3).
+2021-09-14 16:32:40.828 +03 [11764] CONTEXT:  PL/pgSQL function getusernames_v2(citext) line 3 at RETURN QUERY
+2021-09-14 16:32:40.828 +03 [11764] STATEMENT:  select getusernames_v2('ahmad');
+2021-09-14 16:33:59.504 +03 [668] ERROR:  syntax error at or near "default" at character 117
+2021-09-14 16:33:59.504 +03 [668] STATEMENT:  create or replace function getusernames_v2(thisname citext) 
+	returns table(_userid uuid,_uname citext, _age integer default 0 ) 
+	language plpgsql
+	as $$
+	begin
+	return query select userid , uname ,0 as age from student where uname = thisname ;
+	end;
+	$$
+2021-09-14 16:35:02.524 +03 [11764] ERROR:  structure of query does not match function result type
+2021-09-14 16:35:02.524 +03 [11764] DETAIL:  Number of returned columns (2) does not match expected column count (3).
+2021-09-14 16:35:02.524 +03 [11764] CONTEXT:  PL/pgSQL function getusernames_v2(citext) line 3 at RETURN QUERY
+2021-09-14 16:35:02.524 +03 [11764] STATEMENT:  select getusernames_v2();
+2021-09-14 16:35:13.083 +03 [668] ERROR:  cannot change return type of existing function
+2021-09-14 16:35:13.083 +03 [668] DETAIL:  Row type defined by OUT parameters is different.
+2021-09-14 16:35:13.083 +03 [668] HINT:  Use DROP FUNCTION getusernames_v2(citext) first.
+2021-09-14 16:35:13.083 +03 [668] STATEMENT:  create or replace function getusernames_v2(thisname citext default 'ahmad') 
+	returns table(_userid uuid,_uname citext ) 
+	language plpgsql
+	as $$
+	begin
+	return query select userid , uname from student where uname = thisname ;
+	end;
+	$$
+2021-09-14 16:35:21.979 +03 [668] ERROR:  cannot change return type of existing function
+2021-09-14 16:35:21.979 +03 [668] DETAIL:  Row type defined by OUT parameters is different.
+2021-09-14 16:35:21.979 +03 [668] HINT:  Use DROP FUNCTION getusernames_v2(citext) first.
+2021-09-14 16:35:21.979 +03 [668] STATEMENT:  create or replace function getusernames_v2(thisname citext default 'ahmad') 
+	returns table(_userid uuid,_uname citext ) 
+	language plpgsql
+	as $$
+	begin
+	return query select userid , uname from student where uname = thisname ;
+	end;
+	$$
+2021-09-14 16:35:37.571 +03 [11764] ERROR:  syntax error at or near "getusernames_v2" at character 6
+2021-09-14 16:35:37.571 +03 [11764] STATEMENT:  drop getusernames_v2();
+2021-09-14 16:36:09.466 +03 [11764] ERROR:  function getusernames_v2() does not exist
+2021-09-14 16:36:09.466 +03 [11764] STATEMENT:  drop function getusernames_v2();
+2021-09-14 16:36:22.595 +03 [11764] ERROR:  function getusernames_v2() does not exist
+2021-09-14 16:36:22.595 +03 [11764] STATEMENT:  drop function getusernames_v2();
+2021-09-14 16:36:26.220 +03 [11764] ERROR:  structure of query does not match function result type
+2021-09-14 16:36:26.220 +03 [11764] DETAIL:  Number of returned columns (2) does not match expected column count (3).
+2021-09-14 16:36:26.220 +03 [11764] CONTEXT:  PL/pgSQL function getusernames_v2(citext) line 3 at RETURN QUERY
+2021-09-14 16:36:26.220 +03 [11764] STATEMENT:  select getusernames_v2('ahmad');
+2021-09-14 16:37:39.038 +03 [668] ERROR:  syntax error at or near "default" at character 168
+2021-09-14 16:37:39.038 +03 [668] STATEMENT:  -- drop function getusernames_v2;
+	
+	create or replace function getusernames_v2(thisname citext default 'ahmad') 
+	returns table(_userid uuid,_uname citext , age integer default NULL::integer) 
+	language plpgsql
+	as $$
+	begin
+	return query select userid , uname from student where uname = thisname ;
+	end;
+	$$
+2021-09-14 16:37:44.362 +03 [668] ERROR:  syntax error at or near "default" at character 160
+2021-09-14 16:37:44.362 +03 [668] STATEMENT:  -- drop function getusernames_v2;
+	
+	create or replace function getusernames_v2(thisname citext default 'ahmad') 
+	returns table(_userid uuid,_uname citext , age default NULL::integer) 
+	language plpgsql
+	as $$
+	begin
+	return query select userid , uname from student where uname = thisname ;
+	end;
+	$$
+2021-09-14 16:40:37.681 +03 [668] ERROR:  syntax error at or near "default" at character 160
+2021-09-14 16:40:37.681 +03 [668] STATEMENT:  -- drop function getusernames_v2;
+	
+	create or replace function getusernames_v2(thisname citext default 'ahmad') 
+	returns table(_userid uuid,_uname citext , age default (NULL::integer)) 
+	language plpgsql
+	as $$
+	begin
+	return query select userid , uname from student where uname = thisname ;
+	end;
+	$$
+2021-09-14 16:40:59.927 +03 [668] ERROR:  syntax error at or near "default" at character 168
+2021-09-14 16:40:59.927 +03 [668] STATEMENT:  -- drop function getusernames_v2;
+	
+	create or replace function getusernames_v2(thisname citext default 'ahmad') 
+	returns table(_userid uuid,_uname citext , age integer default 0) 
+	language plpgsql
+	as $$
+	begin
+	return query select userid , uname from student where uname = thisname ;
+	end;
+	$$
+2021-09-14 16:42:02.249 +03 [668] ERROR:  syntax error at or near "default" at character 168
+2021-09-14 16:42:02.249 +03 [668] STATEMENT:  -- drop function getusernames_v2;
+	
+	create or replace function getusernames_v2(thisname citext default 'ahmad') 
+	returns table(_userid uuid,_uname citext , age integer default 0::integer) 
+	language plpgsql
+	as $$
+	begin
+	return query select userid , uname from student where uname = thisname ;
+	end;
+	$$
+2021-09-14 16:43:32.059 +03 [11764] ERROR:  function getusernames_v2(unknown) does not exist at character 8
+2021-09-14 16:43:32.059 +03 [11764] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2021-09-14 16:43:32.059 +03 [11764] STATEMENT:  select getusernames_v2('ahmad');
+2021-09-14 16:44:02.667 +03 [11764] ERROR:  structure of query does not match function result type
+2021-09-14 16:44:02.667 +03 [11764] DETAIL:  Number of returned columns (2) does not match expected column count (3).
+2021-09-14 16:44:02.667 +03 [11764] CONTEXT:  PL/pgSQL function getusernames_v2(citext) line 3 at RETURN QUERY
+2021-09-14 16:44:02.667 +03 [11764] STATEMENT:  select getusernames_v2('ahmad');
+2021-09-14 16:44:22.211 +03 [11764] ERROR:  column reference "age" is ambiguous at character 24
+2021-09-14 16:44:22.211 +03 [11764] DETAIL:  It could refer to either a PL/pgSQL variable or a table column.
+2021-09-14 16:44:22.211 +03 [11764] QUERY:  select userid , uname ,age as null from student where uname = thisname
+2021-09-14 16:44:22.211 +03 [11764] CONTEXT:  PL/pgSQL function getusernames_v2(citext) line 3 at RETURN QUERY
+2021-09-14 16:44:22.211 +03 [11764] STATEMENT:  select getusernames_v2('ahmad');
+2021-09-14 16:44:49.203 +03 [11764] ERROR:  structure of query does not match function result type
+2021-09-14 16:44:49.203 +03 [11764] DETAIL:  Returned type text does not match expected type integer in column 3.
+2021-09-14 16:44:49.203 +03 [11764] CONTEXT:  PL/pgSQL function getusernames_v2(citext) line 3 at RETURN QUERY
+2021-09-14 16:44:49.203 +03 [11764] STATEMENT:  select getusernames_v2('ahmad');
+2021-09-14 16:45:07.138 +03 [668] ERROR:  syntax error at or near "::" at character 167
+2021-09-14 16:45:07.138 +03 [668] STATEMENT:  -- drop function getusernames_v2;
+	
+	create or replace function getusernames_v2(thisname citext default 'ahmad') 
+	returns table(_userid uuid,_uname citext , age integer::null) 
+	language plpgsql
+	as $$
+	begin
+	return query select userid , uname ,null as age from student where uname = thisname ;
+	end;
+	$$
+2021-09-14 16:45:21.242 +03 [668] ERROR:  syntax error at or near "null" at character 160
+2021-09-14 16:45:21.242 +03 [668] STATEMENT:  -- drop function getusernames_v2;
+	
+	create or replace function getusernames_v2(thisname citext default 'ahmad') 
+	returns table(_userid uuid,_uname citext , age null) 
+	language plpgsql
+	as $$
+	begin
+	return query select userid , uname ,null as age from student where uname = thisname ;
+	end;
+	$$
+2021-09-14 16:45:27.467 +03 [11764] ERROR:  structure of query does not match function result type
+2021-09-14 16:45:27.467 +03 [11764] DETAIL:  Returned type text does not match expected type integer in column 3.
+2021-09-14 16:45:27.467 +03 [11764] CONTEXT:  PL/pgSQL function getusernames_v2(citext) line 3 at RETURN QUERY
+2021-09-14 16:45:27.467 +03 [11764] STATEMENT:  select getusernames_v2('ahmad');
+2021-09-14 16:45:44.478 +03 [668] ERROR:  cannot change return type of existing function
+2021-09-14 16:45:44.478 +03 [668] DETAIL:  Row type defined by OUT parameters is different.
+2021-09-14 16:45:44.478 +03 [668] HINT:  Use DROP FUNCTION getusernames_v2(citext) first.
+2021-09-14 16:45:44.478 +03 [668] STATEMENT:  -- drop function getusernames_v2;
+	
+	create or replace function getusernames_v2(thisname citext default 'ahmad') 
+	returns table(_userid uuid,_uname citext , age citext) 
+	language plpgsql
+	as $$
+	begin
+	return query select userid , uname ,null as age from student where uname = thisname ;
+	end;
+	$$
+2021-09-14 16:46:02.595 +03 [11764] ERROR:  structure of query does not match function result type
+2021-09-14 16:46:02.595 +03 [11764] DETAIL:  Returned type text does not match expected type citext in column 3.
+2021-09-14 16:46:02.595 +03 [11764] CONTEXT:  PL/pgSQL function getusernames_v2(citext) line 3 at RETURN QUERY
+2021-09-14 16:46:02.595 +03 [11764] STATEMENT:  select getusernames_v2('ahmad');
+2021-09-14 16:46:32.747 +03 [11764] ERROR:  structure of query does not match function result type
+2021-09-14 16:46:32.747 +03 [11764] DETAIL:  Returned type integer does not match expected type citext in column 3.
+2021-09-14 16:46:32.747 +03 [11764] CONTEXT:  PL/pgSQL function getusernames_v2(citext) line 3 at RETURN QUERY
+2021-09-14 16:46:32.747 +03 [11764] STATEMENT:  select getusernames_v2('ahmad');
+2021-09-14 16:46:44.442 +03 [668] ERROR:  syntax error at or near "0" at character 160
+2021-09-14 16:46:44.442 +03 [668] STATEMENT:  -- drop function getusernames_v2;
+	
+	create or replace function getusernames_v2(thisname citext default 'ahmad') 
+	returns table(_userid uuid,_uname citext , age 0) 
+	language plpgsql
+	as $$
+	begin
+	return query select userid , uname , from student where uname = thisname ;
+	end;
+	$$
+2021-09-14 16:46:52.840 +03 [668] ERROR:  syntax error at or near "0" at character 156
+2021-09-14 16:46:52.840 +03 [668] STATEMENT:  -- drop function getusernames_v2;
+	
+	create or replace function getusernames_v2(thisname citext default 'ahmad') 
+	returns table(_userid uuid,_uname citext , 0 as age) 
+	language plpgsql
+	as $$
+	begin
+	return query select userid , uname , from student where uname = thisname ;
+	end;
+	$$
+2021-09-14 16:47:04.674 +03 [668] ERROR:  syntax error at or near "0" at character 159
+2021-09-14 16:47:04.674 +03 [668] STATEMENT:  -- drop function getusernames_v2;
+	
+	create or replace function getusernames_v2(thisname citext default 'ahmad') 
+	returns table(_userid uuid,_uname citext ,age 0 as age) 
+	language plpgsql
+	as $$
+	begin
+	return query select userid , uname , from student where uname = thisname ;
+	end;
+	$$
+2021-09-14 16:47:25.650 +03 [668] ERROR:  cannot change return type of existing function
+2021-09-14 16:47:25.650 +03 [668] DETAIL:  Row type defined by OUT parameters is different.
+2021-09-14 16:47:25.650 +03 [668] HINT:  Use DROP FUNCTION getusernames_v2(citext) first.
+2021-09-14 16:47:25.650 +03 [668] STATEMENT:  -- drop function getusernames_v2;
+	
+	create or replace function getusernames_v2(thisname citext default 'ahmad') 
+	returns table(_userid uuid,_uname citext ,age integer) 
+	language plpgsql
+	as $$
+	begin
+	return query select userid , uname , from student where uname = thisname ;
+	end;
+	$$
+2021-09-14 16:47:36.498 +03 [11764] ERROR:  function getusernames_v2(unknown) does not exist at character 8
+2021-09-14 16:47:36.498 +03 [11764] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2021-09-14 16:47:36.498 +03 [11764] STATEMENT:  select getusernames_v2('ahmad');
+2021-09-14 16:47:39.586 +03 [668] ERROR:  syntax error at or near "from" at character 235
+2021-09-14 16:47:39.586 +03 [668] STATEMENT:  -- drop function getusernames_v2;
+	
+	create or replace function getusernames_v2(thisname citext default 'ahmad') 
+	returns table(_userid uuid,_uname citext ,age integer) 
+	language plpgsql
+	as $$
+	begin
+	return query select userid , uname , from student where uname = thisname ;
+	end;
+	$$
+2021-09-14 16:47:51.171 +03 [11764] ERROR:  column reference "age" is ambiguous at character 25
+2021-09-14 16:47:51.171 +03 [11764] DETAIL:  It could refer to either a PL/pgSQL variable or a table column.
+2021-09-14 16:47:51.171 +03 [11764] QUERY:  select userid , uname , age from student where uname = thisname
+2021-09-14 16:47:51.171 +03 [11764] CONTEXT:  PL/pgSQL function getusernames_v2(citext) line 3 at RETURN QUERY
+2021-09-14 16:47:51.171 +03 [11764] STATEMENT:  select getusernames_v2('ahmad');
+2021-09-14 16:48:17.145 +03 [668] ERROR:  syntax error at or near "0" at character 160
+2021-09-14 16:48:17.145 +03 [668] STATEMENT:  -- drop function getusernames_v2;
+	
+	create or replace function getusernames_v2(thisname citext default 'ahmad') 
+	returns table(_userid uuid,_uname citext ,_age 0 as age) 
+	language plpgsql
+	as $$
+	begin
+	return query select userid , uname , age from student where uname = thisname ;
+	end;
+	$$
+2021-09-14 16:48:22.995 +03 [668] ERROR:  cannot change return type of existing function
+2021-09-14 16:48:22.995 +03 [668] DETAIL:  Row type defined by OUT parameters is different.
+2021-09-14 16:48:22.995 +03 [668] HINT:  Use DROP FUNCTION getusernames_v2(citext) first.
+2021-09-14 16:48:22.995 +03 [668] STATEMENT:  -- drop function getusernames_v2;
+	
+	create or replace function getusernames_v2(thisname citext default 'ahmad') 
+	returns table(_userid uuid,_uname citext ,_age integer) 
+	language plpgsql
+	as $$
+	begin
+	return query select userid , uname , age from student where uname = thisname ;
+	end;
+	$$
+2021-09-14 16:48:35.192 +03 [668] ERROR:  syntax error at or near "default" at character 168
+2021-09-14 16:48:35.192 +03 [668] STATEMENT:  -- drop function getusernames_v2;
+	
+	create or replace function getusernames_v2(thisname citext default 'ahmad') 
+	returns table(_userid uuid,_uname citext ,_age integer default 0) 
+	language plpgsql
+	as $$
+	begin
+	return query select userid , uname , age from student where uname = thisname ;
+	end;
+	$$
+2021-09-14 16:49:19.001 +03 [668] ERROR:  cannot change return type of existing function
+2021-09-14 16:49:19.001 +03 [668] DETAIL:  Row type defined by OUT parameters is different.
+2021-09-14 16:49:19.001 +03 [668] HINT:  Use DROP FUNCTION getusernames_v2(citext) first.
+2021-09-14 16:49:19.001 +03 [668] STATEMENT:  -- drop function getusernames_v2;
+	
+	create or replace function getusernames_v2(thisname citext default 'ahmad') 
+	returns table(_userid uuid,_uname citext ,_age integer) 
+	language plpgsql
+	as $$
+	begin
+	return query select userid , uname , age from student where uname = thisname ;
+	end;
+	$$
+2021-09-14 16:49:28.338 +03 [11764] ERROR:  function getusernames_v2(unknown) does not exist at character 8
+2021-09-14 16:49:28.338 +03 [11764] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2021-09-14 16:49:28.338 +03 [11764] STATEMENT:  select getusernames_v2('ahmad');
+2021-09-14 16:49:46.898 +03 [11764] ERROR:  syntax error at or near "getusernames_v2" at character 10
+2021-09-14 16:49:46.898 +03 [11764] STATEMENT:  select * getusernames_v2('ahmad');
+2021-09-14 16:50:55.215 +03 [668] ERROR:  syntax error at or near "=" at character 168
+2021-09-14 16:50:55.215 +03 [668] STATEMENT:  -- drop function getusernames_v2;
+	
+	create or replace function getusernames_v2(thisname citext default 'ahmad') 
+	returns table(_userid uuid,_uname citext ,_age integer =null) 
+	language plpgsql
+	as $$
+	begin
+	return query select userid , uname , age from student where uname = thisname ;
+	end;
+	$$
+2021-09-14 16:52:31.355 +03 [11764] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-09-14 17:00:30.332 +03 [668] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-09-14 17:00:30.332 +03 [1996] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-09-14 17:00:30.334 +03 [11880] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-09-14 17:00:30.339 +03 [4484] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-09-14 17:00:30.448 +03 [4988] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-09-14 17:00:30.490 +03 [8156] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-09-14 17:00:30.630 +03 [11840] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	

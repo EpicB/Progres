@@ -1,0 +1,1202 @@
+2021-09-16 10:19:25.398 +03 [10976] FATAL:  password authentication failed for user "postgres"
+2021-09-16 10:19:25.398 +03 [10976] DETAIL:  Connection matched pg_hba.conf line 88: "host    all             all             ::1/128                 scram-sha-256"
+2021-09-16 10:19:52.606 +03 [11260] ERROR:  invalid reference to FROM-clause entry for table "courses" at character 193
+2021-09-16 10:19:52.606 +03 [11260] HINT:  Perhaps you meant to reference the table alias "courses1".
+2021-09-16 10:19:52.606 +03 [11260] STATEMENT:  select users.userid,users.user_type,users.username,courses.courseid,courses.creation_time,courses.course_time,students_marks.mark_value from users join courses as courses1 on 
+	 users.userid = courses.userid join students_marks on courses1.coursesid = students_marks.coursesid where students_marks.userid = '7c20d46b-dfc6-4972-86e2-0cb83873126f';
+2021-09-16 10:20:09.146 +03 [11260] ERROR:  column courses1.coursesid does not exist at character 232
+2021-09-16 10:20:09.146 +03 [11260] HINT:  Perhaps you meant to reference the column "courses1.courseid".
+2021-09-16 10:20:09.146 +03 [11260] STATEMENT:  select users.userid,users.user_type,users.username,courses.courseid,courses.creation_time,courses.course_time,students_marks.mark_value from users join courses as courses1 on 
+	 users.userid = courses1.userid join students_marks on courses1.coursesid = students_marks.coursesid where students_marks.userid = '7c20d46b-dfc6-4972-86e2-0cb83873126f';
+2021-09-16 10:25:04.241 +03 [11260] ERROR:  syntax error at or near "as" at character 198
+2021-09-16 10:25:04.241 +03 [11260] STATEMENT:  select users.userid,users.user_type,users.username,courses.courseid,courses.creation_time,courses.course_time,students_marks.mark_value 
+	 from users join courses 
+	 on users.userid = courses.userid as table1 join students_marks on table1.coursesid = students_marks.coursesid where students_marks.userid = '7c20d46b-dfc6-4972-86e2-0cb83873126f';
+2021-09-16 10:26:13.558 +03 [11260] ERROR:  invalid reference to FROM-clause entry for table "courses" at character 189
+2021-09-16 10:26:13.558 +03 [11260] HINT:  Perhaps you meant to reference the table alias "table1".
+2021-09-16 10:26:13.558 +03 [11260] STATEMENT:  select users.userid,users.user_type,users.username,courses.courseid,courses.creation_time,courses.course_time,students_marks.mark_value 
+	 from users join courses table1
+	 on users.userid = courses.userid  join students_marks on table1.coursesid = students_marks.coursesid where students_marks.userid = '7c20d46b-dfc6-4972-86e2-0cb83873126f';
+2021-09-16 10:26:32.230 +03 [11260] ERROR:  syntax error at or near "table1" at character 198
+2021-09-16 10:26:32.230 +03 [11260] STATEMENT:  select users.userid,users.user_type,users.username,courses.courseid,courses.creation_time,courses.course_time,students_marks.mark_value 
+	 from users join courses 
+	 on users.userid = courses.userid table1 join students_marks on table1.coursesid = students_marks.coursesid where students_marks.userid = '7c20d46b-dfc6-4972-86e2-0cb83873126f';
+2021-09-16 10:27:23.989 +03 [11260] ERROR:  syntax error at or near "as" at character 198
+2021-09-16 10:27:23.989 +03 [11260] STATEMENT:  (select users.userid,users.user_type,users.username,courses.courseid,courses.creation_time,courses.course_time,students_marks.mark_value 
+	 from users join courses on users.userid = courses.userid) as table1 join students_marks on table1.coursesid = students_marks.coursesid where students_marks.userid = '7c20d46b-dfc6-4972-86e2-0cb83873126f';
+2021-09-16 10:30:26.916 +03 [11260] ERROR:  missing FROM-clause entry for table "this" at character 219
+2021-09-16 10:30:26.916 +03 [11260] STATEMENT:  select users.userid,users.user_type,users.username,courses.courseid,courses.creation_time,courses.course_time,students_marks.mark_value 
+	 from users join courses on users.userid = courses.userid join students_marks on this.coursesid = students_marks.coursesid where students_marks.userid = '7c20d46b-dfc6-4972-86e2-0cb83873126f';
+2021-09-16 10:30:37.213 +03 [11260] ERROR:  column "coursesid" does not exist at character 220
+2021-09-16 10:30:37.213 +03 [11260] HINT:  Perhaps you meant to reference the column "courses.courseid" or the column "students_marks.courseid".
+2021-09-16 10:30:37.213 +03 [11260] STATEMENT:  select users.userid,users.user_type,users.username,courses.courseid,courses.creation_time,courses.course_time,students_marks.mark_value 
+	 from users join courses on users.userid = courses.userid join students_marks on  coursesid = students_marks.coursesid where students_marks.userid = '7c20d46b-dfc6-4972-86e2-0cb83873126f';
+2021-09-16 10:30:52.129 +03 [11260] ERROR:  column courses.coursesid does not exist at character 220
+2021-09-16 10:30:52.129 +03 [11260] HINT:  Perhaps you meant to reference the column "courses.courseid".
+2021-09-16 10:30:52.129 +03 [11260] STATEMENT:  select users.userid,users.user_type,users.username,courses.courseid,courses.creation_time,courses.course_time,students_marks.mark_value 
+	 from users join courses on users.userid = courses.userid join students_marks on  courses.coursesid = students_marks.coursesid where students_marks.userid = '7c20d46b-dfc6-4972-86e2-0cb83873126f';
+2021-09-16 10:32:54.539 +03 [11260] ERROR:  column courses.usersid does not exist at character 243
+2021-09-16 10:32:54.539 +03 [11260] HINT:  Perhaps you meant to reference the column "courses.userid".
+2021-09-16 10:32:54.539 +03 [11260] STATEMENT:  select users.userid,users.user_type,users.username,courses.courseid,courses.creation_time,courses.course_time,students_marks.mark_value 
+	 from users join courses on users.userid = courses.userid join students_marks on students_marks.userid = courses.usersid  where students_marks.userid = '7c20d46b-dfc6-4972-86e2-0cb83873126f';
+2021-09-16 10:34:28.380 +03 [11260] ERROR:  missing FROM-clause entry for table "student_marks" at character 234
+2021-09-16 10:34:28.380 +03 [11260] STATEMENT:  select users.userid,users.user_type,users.username,courses.courseid,courses.creation_time,courses.course_time,students_marks.mark_value 
+	 from users join courses on users.userid = courses.userid join students_marks on users.userid = student_marks.userid  where students_marks.userid = '7c20d46b-dfc6-4972-86e2-0cb83873126f';
+2021-09-16 10:44:28.857 +03 [11260] ERROR:  query has no destination for result data
+2021-09-16 10:44:28.857 +03 [11260] HINT:  If you want to discard the results of a SELECT, use PERFORM instead.
+2021-09-16 10:44:28.857 +03 [11260] CONTEXT:  PL/pgSQL function get_all_marks(uuid) line 3 at SQL statement
+2021-09-16 10:44:28.857 +03 [11260] STATEMENT:  select get_all_marks('7c20d46b-dfc6-4972-86e2-0cb83873126f') 
+	l;
+2021-09-16 10:44:32.394 +03 [11260] ERROR:  query has no destination for result data
+2021-09-16 10:44:32.394 +03 [11260] HINT:  If you want to discard the results of a SELECT, use PERFORM instead.
+2021-09-16 10:44:32.394 +03 [11260] CONTEXT:  PL/pgSQL function get_all_marks(uuid) line 3 at SQL statement
+2021-09-16 10:44:32.394 +03 [11260] STATEMENT:  select get_all_marks('7c20d46b-dfc6-4972-86e2-0cb83873126f');
+2021-09-16 10:44:55.521 +03 [11260] ERROR:  syntax error at or near "get_all_marks" at character 10
+2021-09-16 10:44:55.521 +03 [11260] STATEMENT:  select * get_all_marks('7c20d46b-dfc6-4972-86e2-0cb83873126f');
+2021-09-16 11:03:09.319 +03 [2292] ERROR:  function "scan_rows" already exists with same argument types
+2021-09-16 11:03:09.319 +03 [2292] STATEMENT:  CREATE FUNCTION scan_rows(int[]) RETURNS void AS $$
+	DECLARE
+	  x int[];
+	  b int[];
+	BEGIN
+	  FOREACH x SLICE 1 IN ARRAY $1
+	  LOOP
+	  foreach b slice 1 in x;
+	  loop
+	    RAISE NOTICE 'row = %', b;
+		end loop;
+	  END LOOP;
+	END;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+2021-09-16 11:03:24.083 +03 [2292] ERROR:  syntax error at or near "x" at character 156
+2021-09-16 11:03:24.083 +03 [2292] STATEMENT:  CREATE FUNCTION scan_rows_Test(int[]) RETURNS void AS $$
+	DECLARE
+	  x int[];
+	  b int[];
+	BEGIN
+	  FOREACH x SLICE 1 IN ARRAY $1
+	  LOOP
+	  foreach b slice 1 in x;
+	  loop
+	    RAISE NOTICE 'row = %', b;
+		end loop;
+	  END LOOP;
+	END;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+2021-09-16 11:03:42.709 +03 [2292] ERROR:  missing "LOOP" at end of SQL expression at character 163
+2021-09-16 11:03:42.709 +03 [2292] STATEMENT:  CREATE FUNCTION scan_rows_Test(int[]) RETURNS void AS $$
+	DECLARE
+	  x int[];
+	  b int[];
+	BEGIN
+	  FOREACH x SLICE 1 IN ARRAY $1
+	  LOOP
+	  foreach b slice 1 in ARRAY x;
+	  loop
+	    RAISE NOTICE 'row = %', b;
+		end loop;
+	  END LOOP;
+	END;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+2021-09-16 11:04:03.202 +03 [2292] ERROR:  missing "LOOP" at end of SQL expression at character 163
+2021-09-16 11:04:03.202 +03 [2292] STATEMENT:  CREATE FUNCTION scan_rows_Test(int[]) RETURNS void AS $$
+	DECLARE
+	  x int[];
+	  b int[];
+	BEGIN
+	  FOREACH x SLICE 1 IN ARRAY $1
+	  LOOP
+	  foreach b slice 1 in ARRAY x;
+	   LOOP
+	    RAISE NOTICE 'row = %', b;
+		end loop;
+	  END LOOP;
+	END;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+2021-09-16 11:05:10.380 +03 [2292] ERROR:  function "scan_rows_test" already exists with same argument types
+2021-09-16 11:05:10.380 +03 [2292] STATEMENT:  CREATE FUNCTION scan_rows_Test(int[]) RETURNS void AS $$
+	DECLARE
+	  x int[];
+	  b int[];
+	BEGIN
+	  FOREACH x SLICE 1 IN ARRAY $1
+	  LOOP
+	  foreach b slice 1 IN x
+	   LOOP
+	    RAISE NOTICE 'row = %', b;
+		end loop;
+	  END LOOP;
+	END;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+2021-09-16 11:05:19.348 +03 [2292] ERROR:  syntax error at or near "or" at character 17
+2021-09-16 11:05:19.348 +03 [2292] STATEMENT:  CREATE FUNCTION or replace scan_rows_Test(int[]) RETURNS void AS $$
+	DECLARE
+	  x int[];
+	  b int[];
+	BEGIN
+	  FOREACH x SLICE 1 IN ARRAY $1
+	  LOOP
+	  foreach b slice 1 IN x
+	   LOOP
+	    RAISE NOTICE 'row = %', b;
+		end loop;
+	  END LOOP;
+	END;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+2021-09-16 11:05:28.466 +03 [2292] ERROR:  syntax error at or near "x" at character 168
+2021-09-16 11:05:28.466 +03 [2292] STATEMENT:  CREATE or replace FUNCTION  scan_rows_Test(int[]) RETURNS void AS $$
+	DECLARE
+	  x int[];
+	  b int[];
+	BEGIN
+	  FOREACH x SLICE 1 IN ARRAY $1
+	  LOOP
+	  foreach b slice 1 IN x
+	   LOOP
+	    RAISE NOTICE 'row = %', b;
+		end loop;
+	  END LOOP;
+	END;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+2021-09-16 11:20:12.492 +03 [2292] ERROR:  syntax error at or near "$1" at character 157
+2021-09-16 11:20:12.492 +03 [2292] STATEMENT:  CREATE or replace FUNCTION  scan_rows_Test(int[]) RETURNS void AS $$
+	declare
+	x int[];
+	v_counter integer :=0;
+	begin 
+	
+		for i in v_counter..array_upper(array $1,1) loop 
+		raise notice 'this array is %',$1[v_counter];
+		v_counter = v_counter+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:20:43.025 +03 [2292] ERROR:  syntax error at or near "_array" at character 164
+2021-09-16 11:20:43.025 +03 [2292] STATEMENT:  CREATE or replace FUNCTION  scan_rows_Test(_array int[]) RETURNS void AS $$
+	declare
+	x int[];
+	v_counter integer :=0;
+	begin 
+	
+		for i in v_counter..array_upper(array _array,1) loop 
+		raise notice 'this array is %',$1[v_counter];
+		v_counter = v_counter+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:25:47.031 +03 [2292] ERROR:  function array_upper(integer, integer) does not exist at character 8
+2021-09-16 11:25:47.031 +03 [2292] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2021-09-16 11:25:47.031 +03 [2292] QUERY:  SELECT array_upper(_array[1],1)-1
+2021-09-16 11:25:47.031 +03 [2292] CONTEXT:  PL/pgSQL function scan_rows_test(integer[]) line 7 at FOR with integer loop variable
+2021-09-16 11:25:47.031 +03 [2292] STATEMENT:  CREATE or replace FUNCTION  scan_rows_Test(_array int[][]) RETURNS void AS $$
+	declare
+	x int[];
+	v_counter integer :=0;
+	begin 
+	
+		for i in v_counter..array_upper(_array[1],1)-1 loop 
+		raise notice 'this array is %',_array;
+		v_counter = v_counter+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:25:58.597 +03 [2292] ERROR:  function array_upper(integer, integer) does not exist at character 8
+2021-09-16 11:25:58.597 +03 [2292] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2021-09-16 11:25:58.597 +03 [2292] QUERY:  SELECT array_upper(_array[1],1)-1
+2021-09-16 11:25:58.597 +03 [2292] CONTEXT:  PL/pgSQL function scan_rows_test(integer[]) line 7 at FOR with integer loop variable
+2021-09-16 11:25:58.597 +03 [2292] STATEMENT:  CREATE or replace FUNCTION  scan_rows_Test(_array int[][]) RETURNS void AS $$
+	declare
+	x int[];
+	v_counter integer :=0;
+	begin 
+	
+		for i in v_counter..array_upper(_array[1],1)-1 loop 
+		raise notice 'this array is %',_array;
+		v_counter = v_counter+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:27:27.195 +03 [2292] ERROR:  function _array(integer) does not exist at character 8
+2021-09-16 11:27:27.195 +03 [2292] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2021-09-16 11:27:27.195 +03 [2292] QUERY:  SELECT _array(2)
+2021-09-16 11:27:27.195 +03 [2292] CONTEXT:  PL/pgSQL function scan_rows_test(integer[]) line 8 at RAISE
+2021-09-16 11:27:27.195 +03 [2292] STATEMENT:  CREATE or replace FUNCTION  scan_rows_Test(_array int[][]) RETURNS void AS $$
+	declare
+	x int[];
+	v_counter integer :=0;
+	begin 
+	
+		for i in v_counter..array_upper(_array,1)-1 loop 
+		raise notice 'this array is %',_array(2);
+		v_counter = v_counter+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:30:14.399 +03 [2292] ERROR:  syntax error at or near "_array" at character 141
+2021-09-16 11:30:14.399 +03 [2292] STATEMENT:  CREATE or replace FUNCTION  scan_rows_Test(_array int[][]) RETURNS void AS $$
+	declare
+	x int[];
+	v_counter integer :=0;
+	begin 
+	
+		for _name in _array loop 
+		raise notice 'this array is %',_name;
+		v_counter = v_counter+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:30:21.031 +03 [2292] ERROR:  syntax error at or near "array" at character 141
+2021-09-16 11:30:21.031 +03 [2292] STATEMENT:  CREATE or replace FUNCTION  scan_rows_Test(_array int[][]) RETURNS void AS $$
+	declare
+	x int[];
+	v_counter integer :=0;
+	begin 
+	
+		for _name in array _array loop 
+		raise notice 'this array is %',_name;
+		v_counter = v_counter+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:32:20.328 +03 [2292] ERROR:  syntax error at end of input at character 89
+2021-09-16 11:32:20.328 +03 [2292] CONTEXT:  invalid type name "int[1"
+2021-09-16 11:32:20.328 +03 [2292] STATEMENT:  CREATE or replace FUNCTION  scan_rows_Test(_array int[][]) RETURNS void AS $$
+	declare
+	x int[1,2,3];
+	v_counter integer :=0;
+	begin 
+		raise notice 'x : %',x[1];
+		for i in v_counter..array_upper(_array,1)-1 loop 
+		raise notice 'this array is %',_array[i];
+		v_counter = v_counter+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:32:32.407 +03 [2292] ERROR:  syntax error at or near "[" at character 97
+2021-09-16 11:32:32.407 +03 [2292] STATEMENT:  CREATE or replace FUNCTION  scan_rows_Test(_array int[][]) RETURNS void AS $$
+	declare
+	x int[] = [1,2,3];
+	v_counter integer :=0;
+	begin 
+		raise notice 'x : %',x[1];
+		for i in v_counter..array_upper(_array,1)-1 loop 
+		raise notice 'this array is %',_array[i];
+		v_counter = v_counter+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:32:39.401 +03 [2292] ERROR:  malformed array literal: "(1,2,3)"
+2021-09-16 11:32:39.401 +03 [2292] DETAIL:  Array value must start with "{" or dimension information.
+2021-09-16 11:32:39.401 +03 [2292] CONTEXT:  PL/pgSQL function scan_rows_test(integer[]) line 5 during statement block local variable initialization
+2021-09-16 11:32:39.401 +03 [2292] STATEMENT:  CREATE or replace FUNCTION  scan_rows_Test(_array int[][]) RETURNS void AS $$
+	declare
+	x int[] = (1,2,3);
+	v_counter integer :=0;
+	begin 
+		raise notice 'x : %',x[1];
+		for i in v_counter..array_upper(_array,1)-1 loop 
+		raise notice 'this array is %',_array[i];
+		v_counter = v_counter+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:32:49.352 +03 [2292] ERROR:  syntax error at or near "{" at character 97
+2021-09-16 11:32:49.352 +03 [2292] STATEMENT:  CREATE or replace FUNCTION  scan_rows_Test(_array int[][]) RETURNS void AS $$
+	declare
+	x int[] = {1,2,3};
+	v_counter integer :=0;
+	begin 
+		raise notice 'x : %',x[1];
+		for i in v_counter..array_upper(_array,1)-1 loop 
+		raise notice 'this array is %',_array[i];
+		v_counter = v_counter+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:32:56.536 +03 [2292] ERROR:  syntax error at or near "{" at character 97
+2021-09-16 11:32:56.536 +03 [2292] STATEMENT:  CREATE or replace FUNCTION  scan_rows_Test(_array int[][]) RETURNS void AS $$
+	declare
+	x int[] = {1,2,3};
+	v_counter integer :=0;
+	begin 
+		raise notice 'x : %',x[1];
+		for i in v_counter..array_upper(_array,1)-1 loop 
+		raise notice 'this array is %',_array{i};
+		v_counter = v_counter+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:33:03.433 +03 [2292] ERROR:  syntax error at or near "[" at character 97
+2021-09-16 11:33:03.433 +03 [2292] STATEMENT:  CREATE or replace FUNCTION  scan_rows_Test(_array int[][]) RETURNS void AS $$
+	declare
+	x int[] = [1,2,3];
+	v_counter integer :=0;
+	begin 
+		raise notice 'x : %',x[1];
+		for i in v_counter..array_upper(_array,1)-1 loop 
+		raise notice 'this array is %',_array{i};
+		v_counter = v_counter+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:33:12.544 +03 [2292] ERROR:  syntax error at or near "{" at character 259
+2021-09-16 11:33:12.544 +03 [2292] STATEMENT:  CREATE or replace FUNCTION  scan_rows_Test(_array int[][]) RETURNS void AS $$
+	declare
+	x int[] = array [1,2,3];
+	v_counter integer :=0;
+	begin 
+		raise notice 'x : %',x[1];
+		for i in v_counter..array_upper(_array,1)-1 loop 
+		raise notice 'this array is %',_array{i};
+		v_counter = v_counter+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:33:20.873 +03 [2292] ERROR:  mismatched parentheses at or near "]" at character 262
+2021-09-16 11:33:20.873 +03 [2292] STATEMENT:  CREATE or replace FUNCTION  scan_rows_Test(_array int[][]) RETURNS void AS $$
+	declare
+	x int[] = array [1,2,3];
+	v_counter integer :=0;
+	begin 
+		raise notice 'x : %',x[1];
+		for i in v_counter..array_upper(_array,1)-1 loop 
+		raise notice 'this array is %',_array[i]]};
+		v_counter = v_counter+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:37:19.905 +03 [2292] ERROR:  syntax error at or near "_array" at character 243
+2021-09-16 11:37:19.905 +03 [2292] STATEMENT:  CREATE or replace FUNCTION  scan_rows_Test(_array int[]) RETURNS void AS $$
+	declare
+	x int[] = array [1,2,3];
+	v_counter integer :=1;
+	begin 
+		raise notice '_array %',_array[1];
+		raise notice 'x : %',x[1];
+		for i in v_counter..array_upper(array _array,1) loop 
+		raise notice 'this array is %',array _array[v_counter];
+		v_counter = v_counter+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:39:14.546 +03 [2292] ERROR:  syntax error at or near "rray" at character 1
+2021-09-16 11:39:14.546 +03 [2292] STATEMENT:  rray %',_array[1];
+		raise notice 'x : %',x[1];
+		for i in v_counter..array_upper(_array,1) loop 
+		raise notice 'this array is %',_array[v_counter];
+		v_counter = v_counter+1;
+		end loop ;
+2021-09-16 11:39:45.450 +03 [2292] ERROR:  syntax error at or near "_array" at character 171
+2021-09-16 11:39:45.450 +03 [2292] STATEMENT:  CREATE or replace FUNCTION  scan_rows_Test(_array int[]) RETURNS void AS $$
+	declare
+	x int[] = array [1,2,3];
+	v_counter integer :=1;
+	begin 
+		raise notice '_array %',array _array[1];
+		raise notice 'x : %',x[1];
+		for i in v_counter..array_upper(array _array,1) loop 
+		raise notice 'this array is %',array _array[v_counter];
+		v_counter = v_counter+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:40:13.794 +03 [2292] ERROR:  syntax error at or near "declare" at character 60
+2021-09-16 11:40:13.794 +03 [2292] STATEMENT:  CREATE or replace procedure  scan_rows_Test(_array int[]) 
+	declare
+	x int[] = array [1,2,3];
+	v_counter integer :=1;
+	begin 
+		raise notice '_array %',_array[1];
+		raise notice 'x : %',x[1];
+		for i in v_counter..array_upper(_array,1) loop 
+		raise notice 'this array is %',_array[v_counter];
+		v_counter = v_counter+1;
+		end loop ;
+	
+	end;
+	LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:40:56.702 +03 [2292] ERROR:  cannot change routine kind
+2021-09-16 11:40:56.702 +03 [2292] DETAIL:  "scan_rows_test" is a function.
+2021-09-16 11:40:56.702 +03 [2292] STATEMENT:  CREATE or replace procedure  scan_rows_Test(_array int[]) 
+	AS $$
+	declare
+	x int[] = array [1,2,3];
+	v_counter integer :=1;
+	begin 
+		raise notice '_array %',_array[1];
+		raise notice 'x : %',x[1];
+		for i in v_counter..array_upper(_array,1) loop 
+		raise notice 'this array is %',_array[v_counter];
+		v_counter = v_counter+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:41:04.672 +03 [2292] ERROR:  syntax error at or near "SELECT" at character 360
+2021-09-16 11:41:04.672 +03 [2292] STATEMENT:  CREATE or replace procedure  scan_rows_Test(_array int[]) 
+	AS $$
+	LANGUAGE plpgsql;
+	declare
+	x int[] = array [1,2,3];
+	v_counter integer :=1;
+	begin 
+		raise notice '_array %',_array[1];
+		raise notice 'x : %',x[1];
+		for i in v_counter..array_upper(_array,1) loop 
+		raise notice 'this array is %',_array[v_counter];
+		v_counter = v_counter+1;
+		end loop ;
+	
+	end;
+	$$ 
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:41:10.216 +03 [2292] ERROR:  syntax error at or near "SELECT" at character 360
+2021-09-16 11:41:10.216 +03 [2292] STATEMENT:  CREATE or replace procedure  scan_rows_Test(_array int[]) 
+	AS $$
+	LANGUAGE plpgsql;
+	declare
+	x int[] = array [1,2,3];
+	v_counter integer :=1;
+	begin 
+		raise notice '_array %',_array[1];
+		raise notice 'x : %',x[1];
+		for i in v_counter..array_upper(_array,1) loop 
+		raise notice 'this array is %',_array[v_counter];
+		v_counter = v_counter+1;
+		end loop ;
+	
+	end;
+	$$ 
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:41:17.601 +03 [2292] ERROR:  syntax error at or near "call" at character 360
+2021-09-16 11:41:17.601 +03 [2292] STATEMENT:  CREATE or replace procedure  scan_rows_Test(_array int[]) 
+	AS $$
+	LANGUAGE plpgsql;
+	declare
+	x int[] = array [1,2,3];
+	v_counter integer :=1;
+	begin 
+		raise notice '_array %',_array[1];
+		raise notice 'x : %',x[1];
+		for i in v_counter..array_upper(_array,1) loop 
+		raise notice 'this array is %',_array[v_counter];
+		v_counter = v_counter+1;
+		end loop ;
+	
+	end;
+	$$ 
+	
+	call scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:41:27.999 +03 [2292] ERROR:  syntax error at or near "void" at character 67
+2021-09-16 11:41:27.999 +03 [2292] STATEMENT:  CREATE or replace procedure  scan_rows_Test(_array int[]) RETURNS void AS $$
+	declare
+	x int[] = array [1,2,3];
+	v_counter integer :=1;
+	begin 
+		raise notice '_array %',_array[1];
+		raise notice 'x : %',x[1];
+		for i in v_counter..array_upper(_array,1) loop 
+		raise notice 'this array is %',_array[v_counter];
+		v_counter = v_counter+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:41:49.857 +03 [2292] ERROR:  syntax error at or near ">" at character 301
+2021-09-16 11:41:49.857 +03 [2292] STATEMENT:  CREATE or replace function  scan_rows_Test(_array int[]) RETURNS void AS $$
+	declare
+	x int[] = array [1,2,3];
+	v_counter integer :=1;
+	begin 
+		raise notice '_array %',_array[1];
+		raise notice 'x : %',x[1];
+		for i in v_counter..array_upper(_array,1) loop 
+		raise notice 'this array is %',_array<v_counter>;
+		v_counter = v_counter+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:48:35.693 +03 [9928] ERROR:  syntax error at or near "VOLATILE" at character 6
+2021-09-16 11:48:35.693 +03 [9928] STATEMENT:  
+	    VOLATILE PARALLEL UNSAFE
+	    ROWS 1000
+	
+	AS $BODY$
+	begin
+	return query select distinct users.userid,users.user_type,users.username,courses.courseid,courses.creation_time,courses.course_time,students_marks.mark_value 
+	 from users inner join courses on users.userid = courses.userid inner join students_marks on users.userid = students_marks.userid  where students_marks.userid = thisuuid;
+	end;
+	$BODY$;
+	
+	ALTER FUNCTION public.get_all_marks(uuid)
+	    OWNER TO postgres;
+	
+2021-09-16 11:52:48.996 +03 [2292] ERROR:  syntax error at or near "]" at character 304
+2021-09-16 11:52:48.996 +03 [2292] STATEMENT:  CREATE or replace function  scan_rows_Test(_array int[][]) RETURNS void AS $$
+	declare
+	x int[] = array [1,2,3];
+	_row integer :=1;
+	_column integer :=1;
+	begin 
+		raise notice '_array %',_array[1];
+		raise notice 'x : %',x[1];
+		for i in _row..array_upper(_array,1) loop 
+		for i in _column..array_upper(_array[],1) loop
+		raise notice 'this array is %',_array[_row][_column];
+		_column = _column + 1;
+			end loop
+			_row = _row+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:52:58.404 +03 [2292] ERROR:  syntax error at or near "=" at character 409
+2021-09-16 11:52:58.404 +03 [2292] STATEMENT:  CREATE or replace function  scan_rows_Test(_array int[][]) RETURNS void AS $$
+	declare
+	x int[] = array [1,2,3];
+	_row integer :=1;
+	_column integer :=1;
+	begin 
+		raise notice '_array %',_array[1];
+		raise notice 'x : %',x[1];
+		for i in _row..array_upper(_array,1) loop 
+		for i in _column..array_upper(_array,1) loop
+		raise notice 'this array is %',_array[_row][_column];
+		_column = _column + 1;
+			end loop
+			_row = _row+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:53:11.169 +03 [2292] ERROR:  syntax error at or near "=" at character 409
+2021-09-16 11:53:11.169 +03 [2292] STATEMENT:  CREATE or replace function  scan_rows_Test(_array int[][]) RETURNS void AS $$
+	declare
+	x int[] = array [1,2,3];
+	_row integer :=1;
+	_column integer :=1;
+	begin 
+		raise notice '_array %',_array[1];
+		raise notice 'x : %',x[1];
+		for i in _row..array_upper(_array,1) loop 
+		for i in _column..array_upper(_array,1) loop
+		raise notice 'this array is %',_array[_row][_column];
+		_column = _column + 1;
+			end loop
+			_row = _row+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:55:56.837 +03 [2292] ERROR:  function array_length(integer, integer) does not exist at character 8
+2021-09-16 11:55:56.837 +03 [2292] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2021-09-16 11:55:56.837 +03 [2292] QUERY:  SELECT array_length(_array[0],1)
+2021-09-16 11:55:56.837 +03 [2292] CONTEXT:  PL/pgSQL function scan_rows_test(integer[]) line 10 at FOR with integer loop variable
+2021-09-16 11:55:56.837 +03 [2292] STATEMENT:  CREATE or replace function  scan_rows_Test(_array int[][]) RETURNS void AS $$
+	declare
+	x int[] = array [1,2,3];
+	_row integer :=1;
+	_column integer :=1;
+	begin 
+		raise notice '_array %',_array[1];
+		raise notice 'x : %',x[1];
+		for i in _row..array_upper(_array,1) loop 
+		for i in _column..array_length(_array[0],1) loop
+		raise notice 'this array is %',_array[_row][_column];
+		_column = _column + 1;
+			end loop;
+			_row = _row+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:56:00.642 +03 [2292] ERROR:  function array_length(integer, integer) does not exist at character 8
+2021-09-16 11:56:00.642 +03 [2292] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2021-09-16 11:56:00.642 +03 [2292] QUERY:  SELECT array_length(_array[0],1)
+2021-09-16 11:56:00.642 +03 [2292] CONTEXT:  PL/pgSQL function scan_rows_test(integer[]) line 10 at FOR with integer loop variable
+2021-09-16 11:56:00.642 +03 [2292] STATEMENT:  CREATE or replace function  scan_rows_Test(_array int[][]) RETURNS void AS $$
+	declare
+	x int[] = array [1,2,3];
+	_row integer :=1;
+	_column integer :=1;
+	begin 
+		raise notice '_array %',_array[1];
+		raise notice 'x : %',x[1];
+		for i in _row..array_upper(_array,1) loop 
+		for i in _column..array_length(_array[0],1) loop
+		raise notice 'this array is %',_array[_row][_column];
+		_column = _column + 1;
+			end loop;
+			_row = _row+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:56:18.867 +03 [2292] ERROR:  function array_upper(integer, integer) does not exist at character 8
+2021-09-16 11:56:18.867 +03 [2292] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2021-09-16 11:56:18.867 +03 [2292] QUERY:  SELECT array_upper(_array[0],1)
+2021-09-16 11:56:18.867 +03 [2292] CONTEXT:  PL/pgSQL function scan_rows_test(integer[]) line 10 at FOR with integer loop variable
+2021-09-16 11:56:18.867 +03 [2292] STATEMENT:  CREATE or replace function  scan_rows_Test(_array int[][]) RETURNS void AS $$
+	declare
+	x int[] = array [1,2,3];
+	_row integer :=1;
+	_column integer :=1;
+	begin 
+		raise notice '_array %',_array[1];
+		raise notice 'x : %',x[1];
+		for i in _row..array_upper(_array,1) loop 
+		for i in _column..array_upper(_array[0],1) loop
+		raise notice 'this array is %',_array[_row][_column];
+		_column = _column + 1;
+			end loop;
+			_row = _row+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:56:26.312 +03 [2292] ERROR:  function array_upper(integer, integer) does not exist at character 8
+2021-09-16 11:56:26.312 +03 [2292] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2021-09-16 11:56:26.312 +03 [2292] QUERY:  SELECT array_upper(_array[0],1)
+2021-09-16 11:56:26.312 +03 [2292] CONTEXT:  PL/pgSQL function scan_rows_test(integer[]) line 10 at FOR with integer loop variable
+2021-09-16 11:56:26.312 +03 [2292] STATEMENT:  CREATE or replace function  scan_rows_Test(_array int[][]) RETURNS void AS $$
+	declare
+	x int[] = array [1,2,3];
+	_row integer :=1;
+	_column integer :=1;
+	begin 
+		raise notice '_array %',_array[1];
+		raise notice 'x : %',x[1];
+		for i in _row..array_upper(_array,1) loop 
+		for i in _column..array_upper(_array[0],1) loop
+		raise notice 'this array is %',_array[_row][_column];
+		_column = _column + 1;
+			end loop;
+			_row = _row+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:56:43.458 +03 [2292] ERROR:  function array_upper(integer, integer) does not exist at character 8
+2021-09-16 11:56:43.458 +03 [2292] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2021-09-16 11:56:43.458 +03 [2292] QUERY:  SELECT array_upper(_array[0],1)
+2021-09-16 11:56:43.458 +03 [2292] CONTEXT:  PL/pgSQL function scan_rows_test(integer[]) line 10 at FOR with integer loop variable
+2021-09-16 11:56:43.458 +03 [2292] STATEMENT:  CREATE or replace function  scan_rows_Test(_array int[][]) RETURNS void AS $$
+	declare
+	x int[] = array [1,2,3];
+	_row integer :=1;
+	_column integer :=1;
+	begin 
+		raise notice '_array %',_array[1];
+		raise notice 'x : %',x[1];
+		for i in _row..array_upper(_array,1) loop 
+		for i in _column..array_upper(_array[0],1) loop
+		raise notice 'this array is %',_array[_row][_column];
+		_column = _column + 1;
+			end loop;
+			_row = _row+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:56:55.499 +03 [2292] ERROR:  function array_upper(integer, integer) does not exist at character 8
+2021-09-16 11:56:55.499 +03 [2292] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2021-09-16 11:56:55.499 +03 [2292] QUERY:  SELECT array_upper(_array[0],1)
+2021-09-16 11:56:55.499 +03 [2292] CONTEXT:  PL/pgSQL function scan_rows_test(integer[]) line 10 at FOR with integer loop variable
+2021-09-16 11:56:55.499 +03 [2292] STATEMENT:  CREATE or replace function  scan_rows_Test(_array int[][]) RETURNS void AS $$
+	declare
+	x int[] = array [1,2,3];
+	_row integer :=1;
+	_column integer :=1;
+	begin 
+		raise notice '_array %',_array[1];
+		raise notice 'x : %',x[1];
+		for i in _row..array_upper(_array,1) loop 
+		for i in _column..array_upper(_array[0],1) loop
+		raise notice 'this array is %',_array[_row][_column];
+		_column = _column + 1;
+			end loop;
+			_row = _row+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:57:44.155 +03 [2292] ERROR:  function array_upper(integer, integer) does not exist at character 8
+2021-09-16 11:57:44.155 +03 [2292] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2021-09-16 11:57:44.155 +03 [2292] QUERY:  SELECT array_upper(_array[0],1)
+2021-09-16 11:57:44.155 +03 [2292] CONTEXT:  PL/pgSQL function scan_rows_test(integer[]) line 10 at FOR with integer loop variable
+2021-09-16 11:57:44.155 +03 [2292] STATEMENT:  CREATE or replace function  scan_rows_Test(_array int[][]) RETURNS void AS $$
+	declare
+	x int[] = array [1,2,3];
+	_row integer :=1;
+	_column integer :=1;
+	begin 
+		raise notice '_array %',_array[1];
+		raise notice 'x : %',x[1];
+		for i in _row..array_upper(_array,1) loop 
+		for i in _column..array_upper(_array[0],1) loop
+		raise notice 'this array is %',_array[_row][_column];
+		_column = _column + 1;
+			end loop;
+			_row = _row+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:58:17.927 +03 [2292] ERROR:  function array_upper(integer, integer) does not exist at character 8
+2021-09-16 11:58:17.927 +03 [2292] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2021-09-16 11:58:17.927 +03 [2292] QUERY:  SELECT array_upper(_array[_row],1)
+2021-09-16 11:58:17.927 +03 [2292] CONTEXT:  PL/pgSQL function scan_rows_test(integer[]) line 10 at FOR with integer loop variable
+2021-09-16 11:58:17.927 +03 [2292] STATEMENT:  CREATE or replace function  scan_rows_Test(_array int[][]) RETURNS void AS $$
+	declare
+	x int[] = array [1,2,3];
+	_row integer :=1;
+	_column integer :=1;
+	begin 
+		raise notice '_array %',_array[1];
+		raise notice 'x : %',x[1];
+		for i in _row..array_upper(_array,1) loop 
+		for i in _column..array_upper(_array[_row],1) loop
+		raise notice 'this array is %',_array[_row][_column];
+		_column = _column + 1;
+			end loop;
+			_row = _row+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:58:23.788 +03 [2292] ERROR:  syntax error at or near "]" at character 304
+2021-09-16 11:58:23.788 +03 [2292] STATEMENT:  CREATE or replace function  scan_rows_Test(_array int[][]) RETURNS void AS $$
+	declare
+	x int[] = array [1,2,3];
+	_row integer :=1;
+	_column integer :=1;
+	begin 
+		raise notice '_array %',_array[1];
+		raise notice 'x : %',x[1];
+		for i in _row..array_upper(_array,1) loop 
+		for i in _column..array_upper(_array[],1) loop
+		raise notice 'this array is %',_array[_row][_column];
+		_column = _column + 1;
+			end loop;
+			_row = _row+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:58:29.316 +03 [2292] ERROR:  syntax error at or near "]" at character 304
+2021-09-16 11:58:29.316 +03 [2292] STATEMENT:  CREATE or replace function  scan_rows_Test(_array int[][]) RETURNS void AS $$
+	declare
+	x int[] = array [1,2,3];
+	_row integer :=1;
+	_column integer :=1;
+	begin 
+		raise notice '_array %',_array[1];
+		raise notice 'x : %',x[1];
+		for i in _row..array_upper(_array,1) loop 
+		for i in _column..array_upper(_array[],1) loop
+		raise notice 'this array is %',_array[_row][_column];
+		_column = _column + 1;
+			end loop;
+			_row = _row+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 11:58:34.253 +03 [2292] ERROR:  syntax error at or near "]" at character 304
+2021-09-16 11:58:34.253 +03 [2292] STATEMENT:  CREATE or replace function  scan_rows_Test(_array int[][]) RETURNS void AS $$
+	declare
+	x int[] = array [1,2,3];
+	_row integer :=1;
+	_column integer :=1;
+	begin 
+		raise notice '_array %',_array[1];
+		raise notice 'x : %',x[1];
+		for i in _row..array_upper(_array,1) loop 
+		for i in _column..array_upper(_array[],1) loop
+		raise notice 'this array is %',_array[_row][_column];
+		_column = _column + 1;
+			end loop;
+			_row = _row+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 12:00:20.710 +03 [2292] ERROR:  function array_upper(integer, integer) does not exist at character 8
+2021-09-16 12:00:20.710 +03 [2292] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2021-09-16 12:00:20.710 +03 [2292] QUERY:  SELECT array_upper(_array[0],1)
+2021-09-16 12:00:20.710 +03 [2292] CONTEXT:  PL/pgSQL function scan_rows_test(integer[]) line 10 at FOR with integer loop variable
+2021-09-16 12:00:20.710 +03 [2292] STATEMENT:  CREATE or replace function  scan_rows_Test(_array int[][]) RETURNS void AS $$
+	declare
+	x int[] = array [1,2,3];
+	_row integer :=1;
+	_column integer :=1;
+	begin 
+		raise notice '_array %',_array[1];
+		raise notice 'x : %',x[1];
+		for i in _row..array_upper(_array,1) loop 
+		for i in _column..array_upper(_array[0],1) loop
+		raise notice 'this array is %',_array[_row][_column];
+		_column = _column + 1;
+			end loop;
+			_row = _row+1;
+		end loop ;
+	
+	end;
+	$$ LANGUAGE plpgsql;
+	
+	SELECT scan_rows_Test(ARRAY[[1,2,3],[4,5,6],[7,8,9],[10,11,12]]);
+	
+	
+	
+	
+2021-09-16 12:27:04.604 +03 [11260] ERROR:  could not open extension control file "C:/Program Files/PostgreSQL/13/share/extension/plv8.control": No such file or directory
+2021-09-16 12:27:04.604 +03 [11260] STATEMENT:  CREATE EXTENSION IF NOT EXISTS "plv8";
+2021-09-16 12:28:20.637 +03 [11260] ERROR:  could not open extension control file "C:/Program Files/PostgreSQL/13/share/extension/plv8.control": No such file or directory
+2021-09-16 12:28:20.637 +03 [11260] STATEMENT:  CREATE EXTENSION plv8;
+2021-09-16 12:34:29.326 +03 [3900] ERROR:  relation "pg_avaliable_extensions" does not exist at character 15
+2021-09-16 12:34:29.326 +03 [3900] STATEMENT:  select * from pg_avaliable_extensions
+	;
+2021-09-16 12:58:08.384 +03 [3900] ERROR:  function get_all_marks(unknown) does not exist at character 15
+2021-09-16 12:58:08.384 +03 [3900] HINT:  No function matches the given name and argument types. You might need to add explicit type casts.
+2021-09-16 12:58:08.384 +03 [3900] STATEMENT:  select * from get_all_marks('7c20d46b-dfc6-4972-86e2-0cb83873126f');
+2021-09-16 13:18:47.342 +03 [11508] ERROR:  could not open extension control file "C:/Program Files/PostgreSQL/13/share/extension/plv8.control": No such file or directory
+2021-09-16 13:18:47.342 +03 [11508] STATEMENT:  create extension plv8
+	;
+2021-09-16 13:51:18.126 +03 [11508] ERROR:  could not open extension control file "C:/Program Files/PostgreSQL/13/share/extension/plv8.control": No such file or directory
+2021-09-16 13:51:18.126 +03 [11508] STATEMENT:  create extension plv8
+	;
+2021-09-16 13:52:03.098 +03 [11508] ERROR:  syntax error at or near "make" at character 1
+2021-09-16 13:52:03.098 +03 [11508] STATEMENT:  make 
+	;
+2021-09-16 13:53:42.147 +03 [11508] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-09-16 14:16:27.151 +03 [1972] ERROR:  could not open extension control file "C:/Program Files/PostgreSQL/13/share/extension/plv8.control": No such file or directory
+2021-09-16 14:16:27.151 +03 [1972] STATEMENT:  create extension plv8
+	;
+2021-09-16 14:19:18.998 +03 [10324] ERROR:  syntax error in file "C:/Program Files/PostgreSQL/13/share/extension/plv8.control" line 1, near token ""
+2021-09-16 14:19:18.998 +03 [10324] STATEMENT:  create extension plv8;
+2021-09-16 14:19:24.248 +03 [10324] LOG:  could not receive data from client: An existing connection was forcibly closed by the remote host.
+	
+2021-09-16 14:20:06.812 +03 [3884] ERROR:  relation "pg_available_extension" does not exist at character 15
+2021-09-16 14:20:06.812 +03 [3884] STATEMENT:  select * from pg_available_extension
+	;
+2021-09-16 14:20:11.494 +03 [3884] ERROR:  syntax error in file "C:/Program Files/PostgreSQL/13/share/extension/plcoffee.control" line 1, near token ""
+2021-09-16 14:20:11.494 +03 [3884] STATEMENT:  select * from pg_available_extensions
+	;
+2021-09-16 15:28:59.400 +03 [7144] ERROR:  syntax error at or near ")" at character 66
+2021-09-16 15:28:59.400 +03 [7144] STATEMENT:  create or replace function test_cursor(_uuid uuid) returns table() 
+	language plpgsql
+	as $$
+	declare 
+	
+	cursor x is select userid , user_type,username from users
+	
+	begin
+	OPEN cur_students;
+	   LOOP
+	      FETCH cur_students into s_rollNo, s_name, s_address;
+	      EXIT WHEN cur_students%notfound;
+	      dbms_output.put_line(s_rollNo || ' ' || s_name || ' ' || s_address);
+	   END LOOP;
+	   CLOSE cur_students;
+	   
+	end;
+	$$
+2021-09-16 15:41:51.400 +03 [5544] LOG:  server process (PID 10124) was terminated by exception 0xC0000135
+2021-09-16 15:41:51.400 +03 [5544] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-09-16 15:41:51.401 +03 [5544] LOG:  terminating any other active server processes
+2021-09-16 15:41:51.443 +03 [7144] WARNING:  terminating connection because of crash of another server process
+2021-09-16 15:41:51.443 +03 [7144] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-09-16 15:41:51.443 +03 [7144] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-09-16 15:41:51.638 +03 [1084] WARNING:  terminating connection because of crash of another server process
+2021-09-16 15:41:51.638 +03 [1084] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-09-16 15:41:51.638 +03 [1084] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-09-16 15:41:51.654 +03 [3884] WARNING:  terminating connection because of crash of another server process
+2021-09-16 15:41:51.654 +03 [3884] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-09-16 15:41:51.654 +03 [3884] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-09-16 15:41:52.105 +03 [12264] WARNING:  terminating connection because of crash of another server process
+2021-09-16 15:41:52.105 +03 [12264] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-09-16 15:41:52.105 +03 [12264] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-09-16 15:41:52.196 +03 [9928] WARNING:  terminating connection because of crash of another server process
+2021-09-16 15:41:52.196 +03 [9928] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-09-16 15:41:52.196 +03 [9928] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-09-16 15:41:52.316 +03 [10388] WARNING:  terminating connection because of crash of another server process
+2021-09-16 15:41:52.316 +03 [10388] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-09-16 15:41:52.316 +03 [10388] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-09-16 15:41:52.350 +03 [1684] WARNING:  terminating connection because of crash of another server process
+2021-09-16 15:41:52.350 +03 [1684] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-09-16 15:41:52.350 +03 [1684] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-09-16 15:41:52.683 +03 [6424] WARNING:  terminating connection because of crash of another server process
+2021-09-16 15:41:52.683 +03 [6424] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-09-16 15:41:52.683 +03 [6424] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-09-16 15:41:52.774 +03 [2292] WARNING:  terminating connection because of crash of another server process
+2021-09-16 15:41:52.774 +03 [2292] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-09-16 15:41:52.774 +03 [2292] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-09-16 15:41:52.820 +03 [10184] WARNING:  terminating connection because of crash of another server process
+2021-09-16 15:41:52.820 +03 [10184] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-09-16 15:41:52.820 +03 [10184] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-09-16 15:41:52.840 +03 [5932] WARNING:  terminating connection because of crash of another server process
+2021-09-16 15:41:52.840 +03 [5932] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2021-09-16 15:41:52.840 +03 [5932] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2021-09-16 15:41:53.014 +03 [5544] LOG:  all server processes terminated; reinitializing
+2021-09-16 15:42:03.115 +03 [5544] LOG:  startup process (PID 12016) was terminated by exception 0xC0000135
+2021-09-16 15:42:03.115 +03 [5544] HINT:  See C include file "ntstatus.h" for a description of the hexadecimal value.
+2021-09-16 15:42:03.117 +03 [5544] LOG:  aborting startup due to startup process failure
+2021-09-16 15:42:03.182 +03 [5544] LOG:  database system is shut down
+2021-09-16 15:42:03.218 +03 [12176] FATAL:  the database system is in recovery mode

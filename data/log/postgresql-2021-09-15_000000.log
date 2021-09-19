@@ -1,0 +1,5 @@
+2021-09-15 00:03:26.550 +03 [10640] LOG:  received fast shutdown request
+2021-09-15 00:03:26.667 +03 [10640] LOG:  aborting any active transactions
+2021-09-15 00:03:26.712 +03 [10640] LOG:  background worker "logical replication launcher" (PID 10608) exited with exit code 1
+2021-09-15 00:03:26.737 +03 [8248] LOG:  shutting down
+2021-09-15 00:03:31.906 +03 [10640] LOG:  database system is shut down

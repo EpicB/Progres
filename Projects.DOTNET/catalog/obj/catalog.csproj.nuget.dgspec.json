@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ayyad\\Desktop\\Projects.DOTNET\\catalog\\catalog.csproj": {}
+    "C:\\Users\\ayyad\\Desktop\\Progres\\Projects.DOTNET\\catalog\\catalog.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ayyad\\Desktop\\Projects.DOTNET\\catalog\\catalog.csproj": {
+    "C:\\Users\\ayyad\\Desktop\\Progres\\Projects.DOTNET\\catalog\\catalog.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ayyad\\Desktop\\Projects.DOTNET\\catalog\\catalog.csproj",
+        "projectUniqueName": "C:\\Users\\ayyad\\Desktop\\Progres\\Projects.DOTNET\\catalog\\catalog.csproj",
         "projectName": "catalog",
-        "projectPath": "C:\\Users\\ayyad\\Desktop\\Projects.DOTNET\\catalog\\catalog.csproj",
+        "projectPath": "C:\\Users\\ayyad\\Desktop\\Progres\\Projects.DOTNET\\catalog\\catalog.csproj",
         "packagesPath": "C:\\Users\\ayyad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ayyad\\Desktop\\Projects.DOTNET\\catalog\\obj\\",
+        "outputPath": "C:\\Users\\ayyad\\Desktop\\Progres\\Projects.DOTNET\\catalog\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ayyad\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -39,12 +39,6 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "dependencies": {
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[5.6.3, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -56,9 +50,6 @@
           "assetTargetFallback": true,
           "warn": true,
           "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

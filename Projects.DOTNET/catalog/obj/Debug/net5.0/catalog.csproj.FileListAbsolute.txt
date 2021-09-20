@@ -1,0 +1,10 @@
+C:\Users\ayyad\Desktop\Progres\Projects.DOTNET\catalog\obj\Debug\net5.0\catalog.csproj.AssemblyReference.cache
+C:\Users\ayyad\Desktop\Progres\Projects.DOTNET\catalog\obj\Debug\net5.0\catalog.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ayyad\Desktop\Progres\Projects.DOTNET\catalog\obj\Debug\net5.0\catalog.AssemblyInfoInputs.cache
+C:\Users\ayyad\Desktop\Progres\Projects.DOTNET\catalog\obj\Debug\net5.0\catalog.AssemblyInfo.cs
+C:\Users\ayyad\Desktop\Progres\Projects.DOTNET\catalog\obj\Debug\net5.0\catalog.csproj.CoreCompileInputs.cache
+C:\Users\ayyad\Desktop\Progres\Projects.DOTNET\catalog\obj\Debug\net5.0\catalog.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ayyad\Desktop\Progres\Projects.DOTNET\catalog\obj\Debug\net5.0\catalog.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ayyad\Desktop\Progres\Projects.DOTNET\catalog\obj\Debug\net5.0\catalog.dll
+C:\Users\ayyad\Desktop\Progres\Projects.DOTNET\catalog\obj\Debug\net5.0\ref\catalog.dll
+C:\Users\ayyad\Desktop\Progres\Projects.DOTNET\catalog\obj\Debug\net5.0\catalog.pdb

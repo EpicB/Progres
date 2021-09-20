@@ -8,3 +8,13 @@ dotnet new <name of the template> -n <name of project>
 dotnet new webapi -n first -->>> how i created the project in the course
 
 code -r first <--- <name of project>
+
+
+
+dotnet tool install --global dotnet-ef  
+
+dotnet add package Microsoft.EntityFrameworkCore.Design
+
+dotnet add package Npgsql.EntityFrameworkCore.PostgreSQL
+
+dotnet ef dbcontext scaffold "Host=localhost;Database=users;Username=postgres;Password=151515" Npgsql.EntityFrameworkCore.PostgreSQL

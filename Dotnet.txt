@@ -1,0 +1,34 @@
+dotnet dev-certs https --trust
+
+
+swagger is an open api specification
+
+
+
+
+Record types in c# allows you to create immuatable instances of an object 
+
+
+get and set properties explanation
+
+Logically.
+
+The presence of a private setter is because you can use auto property:
+
+public int MyProperty { get; set; }
+What would you do if you want to make it readonly?
+
+public int MyProperty { get; }
+Oh crap!! I can't access it from my own class; I should create it like a normal property:
+
+private int myProperty;
+public int MyProperty { get { return myProperty; } }
+Hmm... but I lost the "Auto Property" feature...
+
+public int MyProperty { get; private set; }
+AHHH.. that is better!!
+
+
+public int myProperty {get;init;}
+
+you can use init to get into a middle ground where you 

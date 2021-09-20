@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\ayyad\\Desktop\\Projects.DOTNET\\first\\first.csproj": {}
+    "C:\\Users\\ayyad\\Desktop\\Progres\\Projects.DOTNET\\first\\first.csproj": {}
   },
   "projects": {
-    "C:\\Users\\ayyad\\Desktop\\Projects.DOTNET\\first\\first.csproj": {
+    "C:\\Users\\ayyad\\Desktop\\Progres\\Projects.DOTNET\\first\\first.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\ayyad\\Desktop\\Projects.DOTNET\\first\\first.csproj",
+        "projectUniqueName": "C:\\Users\\ayyad\\Desktop\\Progres\\Projects.DOTNET\\first\\first.csproj",
         "projectName": "first",
-        "projectPath": "C:\\Users\\ayyad\\Desktop\\Projects.DOTNET\\first\\first.csproj",
+        "projectPath": "C:\\Users\\ayyad\\Desktop\\Progres\\Projects.DOTNET\\first\\first.csproj",
         "packagesPath": "C:\\Users\\ayyad\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\ayyad\\Desktop\\Projects.DOTNET\\first\\obj\\",
+        "outputPath": "C:\\Users\\ayyad\\Desktop\\Progres\\Projects.DOTNET\\first\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ayyad\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,6 +40,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[5.6.3, )"

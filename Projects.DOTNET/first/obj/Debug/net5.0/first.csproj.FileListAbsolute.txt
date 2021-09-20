@@ -5,3 +5,10 @@ C:\Users\ayyad\Desktop\Projects.DOTNET\first\obj\Debug\net5.0\first.AssemblyInfo
 C:\Users\ayyad\Desktop\Projects.DOTNET\first\obj\Debug\net5.0\first.csproj.CoreCompileInputs.cache
 C:\Users\ayyad\Desktop\Projects.DOTNET\first\obj\Debug\net5.0\first.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\ayyad\Desktop\Projects.DOTNET\first\obj\Debug\net5.0\first.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ayyad\Desktop\Progres\Projects.DOTNET\first\obj\Debug\net5.0\first.csproj.AssemblyReference.cache
+C:\Users\ayyad\Desktop\Progres\Projects.DOTNET\first\obj\Debug\net5.0\first.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ayyad\Desktop\Progres\Projects.DOTNET\first\obj\Debug\net5.0\first.AssemblyInfoInputs.cache
+C:\Users\ayyad\Desktop\Progres\Projects.DOTNET\first\obj\Debug\net5.0\first.AssemblyInfo.cs
+C:\Users\ayyad\Desktop\Progres\Projects.DOTNET\first\obj\Debug\net5.0\first.csproj.CoreCompileInputs.cache
+C:\Users\ayyad\Desktop\Progres\Projects.DOTNET\first\obj\Debug\net5.0\first.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\ayyad\Desktop\Progres\Projects.DOTNET\first\obj\Debug\net5.0\first.MvcApplicationPartsAssemblyInfo.cache

@@ -1,0 +1,24 @@
+why do we define an interface for each function ??
+
+we do that to for dependacy injection so we want to connect the implementation with the interface 
+
+
+Back over in our API Project, open the Startup class, and add the following code to our
+ConfigureServices method:
+public void ConfigureServices(IServiceCollection services)
+{
+ services.AddControllers();
+ //Add the code below
+ services.AddScoped<ICommandAPIRepo, MockCommandAPIRepo>();
+}
+The code is quite straightforward; it uses the service collection: services, to register
+our ICommandAPIRepo with MockCommandAPIRepo. The only other novelty is the use of the
+AddScoped method.
+This has to do with something called “Service Lifetimes,” which in essence tells the
+DI system how it should provision a service requested via DI; there are three methods
+available:
+• AddTransient: A service is created each time it is requested from the
+Service Container.
+• AddScoped: A service is created once per client request
+(connection).
+• AddSingleton: A service is created once and reused.

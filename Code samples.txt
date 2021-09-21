@@ -32,3 +32,25 @@ namespace CommandAPI.Controllers
 
 
 the above code is useless but i learned a lot from it every add put or delete function doesnt work but its defined in the controller
+
+
+using System.ComponentModel.DataAnnotations;
+
+namespace CommandAPI.Models
+{
+ public class Command
+ {
+ [Key]
+ [Required]    
+ public int Id {get; set;}
+ [Required]
+ [MaxLength(250)]
+ public string HowTo {get; set;}
+ [Required]
+ public string Platform {get; set;}
+ [Required]
+ public string CommandLine {get; set;}
+ }
+}
+
+DataAnnotations allows you to put properties on the type of data that you are working with 

@@ -1,0 +1,34 @@
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Mvc;
+namespace CommandAPI.Controllers
+{
+ [Route("api/Commands")]
+ [ApiController]
+ public class CommandsController : ControllerBase
+ {
+ [HttpGet]
+ public ActionResult<IEnumerable<string>> Get()
+ {
+ return new string[] {  "this", "is", "hard", "coded"};
+ }
+ [HttpPost]
+ public ActionResult<IEnumerable<string>> Post()
+ {
+ return new string[] {  "this", "is", "hard", "coded"};
+ }
+ [HttpDelete]
+ public ActionResult<IEnumerable<string>> Delete()
+ {
+ return new string[] {  "this", "is", "hard", "coded"};
+ }
+ [HttpPut]
+ public ActionResult<IEnumerable<string>> Put()
+ {
+ return new string[] {  "this", "is", "hard", "coded"};
+ }
+
+ }
+}
+
+
+the above code is useless but i learned a lot from it every add put or delete function doesnt work but its defined in the controller

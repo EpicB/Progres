@@ -112,6 +112,9 @@ how to restart a sequence type value
 
 alter sequence name_of_sequence restart with value_to_start_with;
 
+how to create a new user with a password 
+create user cmddbuser with encrypted password 'pa55w0rd!' createdb;
+
 GENERAL INFO 
 
 BIGSERIAL \\ is a data type that increaments the next value 8 bit number
